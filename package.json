@@ -1,0 +1,15 @@
+{
+  "name": "rhodes-headhunt",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node build-offline.mjs && node server.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "build": "node build-offline.mjs",
+    "pack": "node build-offline.mjs && python package-project.py"
+  },
+  "devDependencies": {
+    "esbuild": "0.28.2"
+  }
+}

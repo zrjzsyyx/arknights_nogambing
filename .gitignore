@@ -1,0 +1,15 @@
+node_modules/
+*.tmp.json
+qa/
+*.log
+
+prts-simulator.tmp.js
+research/
+.tools/
+.npm-cache/
+releases/
+.openai/
+.codex/
+/抽卡视频.mp4
+/Screenshot_2026-11-04-23-13-06-579_com.hypergryp.jpg
+/Screenshot_2026-11-04-23-13-22-738_com.hypergryp.jpg

@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+ <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+ <meta name="theme-color" content="#121a21"><meta name="description" content="将雪投火，回应新的相遇。明日方舟同人沉浸式寻访模拟，交互开包、干员登场、音乐与本地寻访记录。">
+ <title>将雪投火 · 明日方舟寻访模拟</title>
+ <link rel="icon" href="assets/rhodes.svg" type="image/svg+xml"><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="snowfire.css"><link rel="stylesheet" href="official.css?v=official6"><link rel="stylesheet" href="recruitment.css?v=official7">
+ <link rel="stylesheet" href="offline/styles.css?v=7ee481f9c01b">
+</head>
+<body>
+ <svg class="svg-defs" aria-hidden="true"><defs>
+  <filter id="result-five-tint" x="0" y="0" width="100%" height="230%" color-interpolation-filters="sRGB"><feColorMatrix type="matrix" values="1 0 0 0 0 0 0.859 0 0 0 0 0 0.647 0 0 0 0 0 1 0"/></filter>
+  <symbol id="i-island" viewBox="0 0 64 64"><path d="M32 5 61 56H3Z" fill="none" stroke="currentColor" stroke-width="2"/><path d="M23 43V25h5v-7h8v7h5v18h5v7H18v-7Zm4-4h10v-5H27Z" fill="currentColor"/><path d="M10 56h44M28 25h8M32 9v8" stroke="currentColor" stroke-width="2"/></symbol>
+  <symbol id="i-pull" viewBox="0 0 24 24"><path d="m12 2 9 5v10l-9 5-9-5V7Zm0 0v10m9-5-9 5-9-5m9 5v10" fill="none" stroke="currentColor" stroke-width="1.5"/></symbol>
+  <symbol id="i-history" viewBox="0 0 24 24"><path d="M4 7a9 9 0 1 1-1 8M3 2v6h6m3-2v6l4 2" fill="none" stroke="currentColor" stroke-width="1.5"/></symbol>
+  <symbol id="i-collection" viewBox="0 0 24 24"><path d="M4 4h6v6H4zm10 0h6v6h-6zM4 14h6v6H4zm10 0h6v6h-6z" fill="none" stroke="currentColor" stroke-width="1.5"/></symbol>
+  <symbol id="i-audio" viewBox="0 0 24 24"><path d="m4 9 4 0 5-4v14l-5-4H4Zm12-1c3 2 3 6 0 8m3-11c5 4 5 10 0 14" fill="none" stroke="currentColor" stroke-width="1.5"/></symbol>
+  <symbol id="i-expand" viewBox="0 0 24 24"><path d="M9 4H4v5m11-5h5v5M4 15v5h5m11-5v5h-5" fill="none" stroke="currentColor" stroke-width="1.5"/></symbol>
+  <symbol id="i-settings" viewBox="0 0 24 24"><path d="M4 7h16M4 17h16M8 3v8m8 2v8" fill="none" stroke="currentColor" stroke-width="1.5"/></symbol>
+ </defs></svg>
+ <aside class="rail" aria-label="主导航">
+  <a class="brand" href="#" aria-label="罗德岛寻访终端"><svg><use href="#i-island"/></svg><span>RHODES<br>ISLAND</span></a>
+  <span class="rail-divider"></span>
+  <button class="rail-button active" data-page="home" title="干员寻访"><svg><use href="#i-pull"/></svg><span>寻访</span></button>
+  <button class="rail-button" data-page="history" title="寻访记录"><svg><use href="#i-history"/></svg><span>记录</span></button>
+  <button class="rail-button" data-page="collection" title="干员档案"><svg><use href="#i-collection"/></svg><span>档案</span></button>
+  <div class="rail-bottom"><span class="connection-dot"></span><span>PRTS<br>ONLINE</span><span class="rail-version">V.01</span></div>
+ </aside>
+ <div class="app-shell">
+  <header class="topbar"><div class="terminal-label"><span class="tiny-cross">✦</span> 罗德岛人事终端 <span class="slash">/</span> <span>PERSONNEL SYSTEM</span></div><div class="top-actions"><span class="local-badge"><i></i>本地模拟</span><button id="audio-toggle" class="icon-button" title="启用音乐" aria-label="启用音乐"><svg><use href="#i-audio"/></svg><span class="audio-slash"></span></button><button id="fullscreen" class="icon-button" title="切换全屏" aria-label="切换全屏"><svg><use href="#i-expand"/></svg></button><button id="settings-button" class="icon-button" title="音频与演出设置" aria-label="音频与演出设置"><svg><use href="#i-settings"/></svg></button></div></header>
+  <main id="home-page"><div id="game-ui" aria-label="将雪投火官方卡池界面"></div>
+   <div class="page-heading"><div><p class="eyebrow">RHODES ISLAND / HUMAN RESOURCES</p><h1>干员寻访 <span>HEADHUNTING</span></h1></div><div class="doctor"><span class="doctor-mark">D</span><div>欢迎回来，博士。<small>新的相遇，正在等待。</small></div></div></div>
+   <nav class="banner-tabs" aria-label="选择寻访卡池" id="banner-tabs"></nav>
+   <section class="hero" id="hero" aria-label="当前寻访卡池">
+    <div class="hero-grid"></div><div class="hero-orbit orbit-one"></div><div class="hero-orbit orbit-two"></div><div class="hero-watermark" aria-hidden="true">RHODES</div>
+    <div class="art-scene" id="art-scene"><div class="art-halo"></div><img id="secondary-art" class="secondary-art" alt="冻河立绘"><img id="main-art" class="main-art" alt="塔露拉立绘"><div class="art-fog"></div></div>
+    <div class="hero-content"><div class="banner-kicker"><span id="banner-type">限定寻访 · 庆典</span><span class="banner-series">SPECIAL / 01</span></div><div class="title-line"></div><h2 id="banner-title">将雪投火</h2><p class="banner-english" id="banner-english">CINDERS OF SNOW</p><p class="banner-description" id="banner-description">将雪投火 · 限定寻访</p><div class="featured-list" id="featured-list"></div><button class="text-link" id="details-button">寻访详情与概率 <span>↗</span></button></div>
+    <div class="art-label"><span class="vertical-copy">LET THE FIRE ANSWER.</span><span class="coordinate">R.I. / 024.61<br>ABYSSAL SIGNAL DETECTED</span></div>
+    <div class="hero-bottom"><span><i class="red-dot"></i>限定寻访 <b> / </b> 将雪投火</span><span id="banner-index">01 — 03</span></div>
+    <span class="corner corner-tl"></span><span class="corner corner-br"></span>
+   </section>
+   <section class="console" aria-label="寻访操作"><div class="pity-status"><div class="status-icon"><svg><use href="#i-pull"/></svg></div><div><span class="status-label">寻访信号 <b id="guarantee-tag">首次十次内必得五星及以上</b></span><div class="pity-line">距上次六星 <strong id="pity-count">0</strong> 次 <span class="pity-separator">/</span> 当前六星概率 <strong id="pity-rate">2<span>%</span></strong></div><div class="pity-track"><span id="pity-progress"></span></div></div></div><div class="draw-actions"><button class="draw-button single" id="draw-one"><span class="button-top">寻访一次 <b>01</b></span><span class="button-bottom">SINGLE RECRUITMENT <i>免费模拟</i></span></button><button class="draw-button ten" id="draw-ten"><span class="button-top">寻访十次 <b>10<span>↗</span></b></span><span class="button-bottom">TENFOLD RECRUITMENT <i>免费模拟</i></span></button></div></section>
+   <section class="session-strip" aria-label="寻访统计"><div><span class="stat-label">累计寻访</span><strong id="stat-total">000</strong><span class="stat-unit">次</span></div><div><span class="stat-label">六星干员</span><strong id="stat-six">00</strong><span class="gold-stars">★★★★★★</span></div><div><span class="stat-label">干员收集</span><strong id="stat-collection">00</strong><span class="stat-unit" id="stat-roster">/ —</span></div><button id="history-link">查看寻访记录 <span>↗</span></button></section>
+   <div class="music-strip"><button id="music-play" aria-label="播放或暂停背景音乐"><span id="play-symbol">▶</span></button><div class="equalizer"><i></i><i></i><i></i><i></i></div><span id="track-name">AMBIENT / 寻访信号</span><span class="music-hint" id="music-hint">点击开启声音，进入寻访</span><span class="sound-line"></span><span class="music-credit">MUSIC · MONSTER SIREN</span></div>
+  </main>
+  <main id="library-page" hidden><div class="page-heading"><div><p class="eyebrow" id="library-eyebrow">LOCAL ARCHIVE</p><h1 id="library-title">寻访记录</h1></div><button class="outline-button" id="export-button">导出记录 ↗</button></div><div class="library-toolbar"><div id="filter-tabs" class="filter-tabs"><button data-rarity="0" class="active">全部</button><button data-rarity="6">六星</button><button data-rarity="5">五星</button><button data-rarity="4">四星</button><button data-rarity="3">三星</button></div><label class="search-field"><span>⌕</span><input id="operator-search" placeholder="搜索干员" aria-label="搜索干员"></label></div><div id="library-summary" class="library-summary"></div><div id="library-content"></div></main>
+  <footer><span>RHODES ISLAND <b>—</b> HEADHUNTING TERMINAL</span><span>非官方同人模拟 · 立绘版权归鹰角网络所有 <a href="https://prts.wiki/w/寻访模拟/将雪投火" target="_blank" rel="noopener">参考 PRTS ↗</a></span></footer>
+ </div>
+ <section class="experience" id="experience" hidden aria-label="寻访演出" aria-modal="true" role="dialog" tabindex="-1"><canvas id="particles" aria-hidden="true"></canvas><div class="experience-grid"></div><div class="experience-top"><span><svg><use href="#i-island"/></svg> RHODES ISLAND <i>/ RECRUITMENT</i></span><button id="skip-animation">跳过演出 <b>≫</b></button></div>
+  <div class="bag-stage" id="bag-stage"><div id="original-bag" aria-label="原版寻访旅行包三维演出"></div><p class="stage-eyebrow">PERSONNEL TRANSFER / CONFIDENTIAL</p><h2></h2><div class="bag-shell" id="bag-shell"><div class="rarity-beam" id="rarity-beam"></div><div class="bag" id="bag"><div class="bag-light"></div><div class="bag-top"></div><div class="bag-stitch"></div><div class="bag-face"><svg><use href="#i-island"/></svg><strong>RHODES ISLAND</strong><span>HUMAN RESOURCE DEPARTMENT</span><div class="bag-stamp">CONFIDENTIAL</div><div class="bag-barcode"></div><small>RI / PERSONNEL FILE / 08-172</small></div><div class="zipper-track" id="zipper-track"><div class="zipper-open"></div><button class="zipper-pull" id="zipper-pull" aria-label="向左拖动拉链打开寻访包"><span></span></button></div><div class="bag-handle"></div></div></div><p class="drag-instruction"><span>⟵</span> 从右向左滑动拉链开启 <span>⟵</span></p><button class="open-direct" id="open-direct">点击直接开启 <span>↗</span></button><div class="bag-counter" id="bag-counter">01 PERSONNEL FILE</div></div>
+  <div class="reveal-stage" id="reveal-stage" hidden>
+   <div class="reveal-backdrop" aria-hidden="true"></div><div class="reveal-flare" aria-hidden="true"></div>
+   <div class="reveal-faction" aria-hidden="true"><img id="reveal-faction" alt=""></div>
+   <div class="reveal-native-particles" id="reveal-native-particles" aria-hidden="true"></div>
+   <img id="reveal-art" alt="寻访干员立绘">
+   <div class="reveal-info"><div id="reveal-stars" class="reveal-stars" aria-label="星级"></div><div class="reveal-identity"><img id="reveal-profession" alt=""><div><h2 id="reveal-name"></h2><p id="reveal-en" class="reveal-en"></p></div></div><img id="reveal-new" class="reveal-new" src="assets/official/reveal/sprite_sprite_new.webp" alt="首次获得"></div>
+   <div class="reveal-subtitles"><p id="reveal-subtitle"></p></div>
+   <div class="reveal-bottom"><span id="reveal-position">01 / 10</span><div><button id="reveal-voice" aria-label="重播日语报到语音" title="重播日语报到语音">♪</button><button id="reveal-next">点击继续 <span>→</span></button></div></div>
+  </div>
+  <div class="results-stage" id="results-stage" hidden><div class="results-heading"><p class="stage-eyebrow">RECRUITMENT COMPLETE</p><h2>寻访结果 <span>新旅途，从此刻开始。</span></h2></div><div class="result-cards" id="result-cards"></div><div class="results-bottom"><span id="results-caption"></span><div><button class="outline-button" id="result-close">返回寻访</button><button class="primary-button" id="result-again">再次寻访十次 ↗</button></div></div></div>
+  <div class="flash" id="flash"></div>
+ </section>
+ <dialog id="modal"><div class="modal-heading"><div><p class="eyebrow" id="modal-eyebrow">TERMINAL SETTINGS</p><h2 id="modal-title">音频与演出</h2></div><button id="modal-close" class="close-button" aria-label="关闭">×</button></div><div id="modal-body"></div></dialog>
+ <div id="toast" class="toast" role="status"></div>
+ <script defer src="app.bundle.js?v=a55e0140b1ea"></script>
+</body></html>

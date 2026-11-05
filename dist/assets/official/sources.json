@@ -1,0 +1,147 @@
+[
+  {
+    "file": "assets/official/sfx/g_card_10cardsrelease.mp3",
+    "url": "https://raw.githubusercontent.com/ArknightsAssets/ArknightsAssets2/voice/assets/dyn/audio/sound_beta_2/general/g_ui/g_card_10cardsrelease.mp3",
+    "sha256": "0275bcb119b184c498cb1d22abecc3807aafd234d23344f3a815a32edb7903b3"
+  },
+  {
+    "file": "assets/official/sfx/g_card_1cardrelease.mp3",
+    "url": "https://raw.githubusercontent.com/ArknightsAssets/ArknightsAssets2/voice/assets/dyn/audio/sound_beta_2/general/g_ui/g_card_1cardrelease.mp3",
+    "sha256": "9baba84c9bb7026d5bc0ead5b6a768474462b0f645914bb51e1c489456a64813"
+  },
+  {
+    "file": "assets/official/sfx/g_card_checkout.mp3",
+    "url": "https://raw.githubusercontent.com/ArknightsAssets/ArknightsAssets2/voice/assets/dyn/audio/sound_beta_2/general/g_ui/g_card_checkout.mp3",
+    "sha256": "21d7bafaf798732f9ed10529e40567b375d9a98573d84baa91e4e2d2932551ae"
+  },
+  {
+    "file": "assets/official/sfx/g_card_pad_n.mp3",
+    "url": "https://raw.githubusercontent.com/ArknightsAssets/ArknightsAssets2/voice/assets/dyn/audio/sound_beta_2/general/g_ui/g_card_pad_n.mp3",
+    "sha256": "28302fc2088b1570257ce4375a08df524fcb3d1983fdaaad34e4ede1f5c7809c"
+  },
+  {
+    "file": "assets/official/sfx/g_card_pad_r.mp3",
+    "url": "https://raw.githubusercontent.com/ArknightsAssets/ArknightsAssets2/voice/assets/dyn/audio/sound_beta_2/general/g_ui/g_card_pad_r.mp3",
+    "sha256": "d82e9276ad219a1f59f9dff9721bd4fec79c6dbad5bba144342f478ed32421db"
+  },
+  {
+    "file": "assets/official/sfx/g_card_shining1_n.mp3",
+    "url": "https://raw.githubusercontent.com/ArknightsAssets/ArknightsAssets2/voice/assets/dyn/audio/sound_beta_2/general/g_ui/g_card_shining1_n.mp3",
+    "sha256": "674dfb74afef37be5b5c4e17350946aa2184d5c33cf4382f00a2f108aed15813"
+  },
+  {
+    "file": "assets/official/sfx/g_card_shining1_ssr.mp3",
+    "url": "https://raw.githubusercontent.com/ArknightsAssets/ArknightsAssets2/voice/assets/dyn/audio/sound_beta_2/general/g_ui/g_card_shining1_ssr.mp3",
+    "sha256": "eb022f70942dc64388564dc63fe4e0d8e8114aa28eaf293e3a006371cc64685d"
+  },
+  {
+    "file": "assets/official/sfx/g_card_pad_sr.mp3",
+    "url": "https://raw.githubusercontent.com/ArknightsAssets/ArknightsAssets2/voice/assets/dyn/audio/sound_beta_2/general/g_ui/g_card_pad_sr.mp3",
+    "sha256": "5cb5357d1206cf665756758fca645752e9260b5e84f6582ed8453861a50ee700"
+  },
+  {
+    "file": "assets/official/sfx/g_card_pad_ssr.mp3",
+    "url": "https://raw.githubusercontent.com/ArknightsAssets/ArknightsAssets2/voice/assets/dyn/audio/sound_beta_2/general/g_ui/g_card_pad_ssr.mp3",
+    "sha256": "2688c4522a157babbc4259342038c2f1fe532e3d0ad4474bac548e0a484586dc"
+  },
+  {
+    "file": "assets/official/sfx/g_card_shining2_n.mp3",
+    "url": "https://raw.githubusercontent.com/ArknightsAssets/ArknightsAssets2/voice/assets/dyn/audio/sound_beta_2/general/g_ui/g_card_shining2_n.mp3",
+    "sha256": "ef4e5723e7ed474501e127e9cf0c064cbf57453f9b14b3f4c02b5b339f7c3a33"
+  },
+  {
+    "file": "assets/official/sfx/g_card_shining2_ssr.mp3",
+    "url": "https://raw.githubusercontent.com/ArknightsAssets/ArknightsAssets2/voice/assets/dyn/audio/sound_beta_2/general/g_ui/g_card_shining2_ssr.mp3",
+    "sha256": "4af75347e81dfb959bfc2b48b90ed4b8eadfd5a9498d1975372ebc4767f4be6d"
+  },
+  {
+    "file": "assets/official/sfx/g_card_shining3_n.mp3",
+    "url": "https://raw.githubusercontent.com/ArknightsAssets/ArknightsAssets2/voice/assets/dyn/audio/sound_beta_2/general/g_ui/g_card_shining3_n.mp3",
+    "sha256": "94b65d0c69b49a8be7a5704b78c589830012ea0da416c76eb6d41bd4504888c2"
+  },
+  {
+    "file": "assets/official/sfx/g_card_shining3_ssr.mp3",
+    "url": "https://raw.githubusercontent.com/ArknightsAssets/ArknightsAssets2/voice/assets/dyn/audio/sound_beta_2/general/g_ui/g_card_shining3_ssr.mp3",
+    "sha256": "f5b54526eba103b96bcf2eadb8f2d5c96e6c68c6db9c8e371965e3d37ac1780d"
+  },
+  {
+    "file": "assets/official/sfx/g_card_shining4_n.mp3",
+    "url": "https://raw.githubusercontent.com/ArknightsAssets/ArknightsAssets2/voice/assets/dyn/audio/sound_beta_2/general/g_ui/g_card_shining4_n.mp3",
+    "sha256": "43cf9f1daab172e23ed0b2caf6793de2bd31146e6a1b8795ad84e46749c3a3b5"
+  },
+  {
+    "file": "assets/official/sfx/g_card_shining4_ssr.mp3",
+    "url": "https://raw.githubusercontent.com/ArknightsAssets/ArknightsAssets2/voice/assets/dyn/audio/sound_beta_2/general/g_ui/g_card_shining4_ssr.mp3",
+    "sha256": "46ccbed791bb18aee24d1642beb2946df957d429818e228635a4b42ca79ca855"
+  },
+  {
+    "file": "assets/official/sfx/g_card_zipper.mp3",
+    "url": "https://raw.githubusercontent.com/ArknightsAssets/ArknightsAssets2/voice/assets/dyn/audio/sound_beta_2/general/g_ui/g_card_zipper.mp3",
+    "sha256": "c7521826ad1614cd1a391dbf4caa0df35fc20ea5194dd3475da77d53551fe89e"
+  },
+  {
+    "file": "assets/official/sfx/g_ui_10cards.mp3",
+    "url": "https://raw.githubusercontent.com/ArknightsAssets/ArknightsAssets2/voice/assets/dyn/audio/sound_beta_2/general/g_ui/g_ui_10cards.mp3",
+    "sha256": "c4cbc19e9522b321ad57866432b6f32eb1f87ccaf4baf30428fffe43774002a5"
+  },
+  {
+    "file": "assets/official/sfx/g_ui_charentry.mp3",
+    "url": "https://raw.githubusercontent.com/ArknightsAssets/ArknightsAssets2/voice/assets/dyn/audio/sound_beta_2/general/g_ui/g_ui_charentry.mp3",
+    "sha256": "24fd3e43e4262e3df177cd73525cbb2f1954c78427a86663fa48d494003e8a6b"
+  },
+  {
+    "file": "assets/official/sfx/g_ui_packagedrop.mp3",
+    "url": "https://raw.githubusercontent.com/ArknightsAssets/ArknightsAssets2/voice/assets/dyn/audio/sound_beta_2/general/g_ui/g_ui_packagedrop.mp3",
+    "sha256": "803e611fda1abd15352e44bfe953fb1e30d8a26eb531ba181adf0dd60327b22b"
+  },
+  {
+    "file": "assets/official/sfx/mixed_gacha_part1.mp3",
+    "url": "https://raw.githubusercontent.com/ArknightsAssets/ArknightsAssets2/voice/assets/dyn/audio/sound_beta_2/beta1leaveover/mixed_gacha_part1.mp3",
+    "sha256": "7288d9407eae4bfcef8af8e95310ed051a29727cc52c42a9564be90ed13add39"
+  },
+  {
+    "file": "assets/official/sfx/mixed_gacha_part2.mp3",
+    "url": "https://raw.githubusercontent.com/ArknightsAssets/ArknightsAssets2/voice/assets/dyn/audio/sound_beta_2/beta1leaveover/mixed_gacha_part2.mp3",
+    "sha256": "1cc615b64a92ff913ad92d9b976b39d123dd699eaa134825e85e55ff7301ecdf"
+  },
+  {
+    "file": "assets/official/sfx/mixed_gacha_star_5.mp3",
+    "url": "https://raw.githubusercontent.com/ArknightsAssets/ArknightsAssets2/voice/assets/dyn/audio/sound_beta_2/beta1leaveover/mixed_gacha_star_5.mp3",
+    "sha256": "4466826f8a889c27fe82fa1cbc239405e7dcbc8cdd5a7b468171d08ba793295a"
+  },
+  {
+    "file": "assets/official/sfx/mixed_gacha_star_1.mp3",
+    "url": "https://raw.githubusercontent.com/ArknightsAssets/ArknightsAssets2/voice/assets/dyn/audio/sound_beta_2/beta1leaveover/mixed_gacha_star_1.mp3",
+    "sha256": "0efb268b01220fc88a2dc7a507f647e95b116238b8d22c62347aaf79a5e3ea59"
+  },
+  {
+    "file": "assets/official/sfx/mixed_gacha_star_2.mp3",
+    "url": "https://raw.githubusercontent.com/ArknightsAssets/ArknightsAssets2/voice/assets/dyn/audio/sound_beta_2/beta1leaveover/mixed_gacha_star_2.mp3",
+    "sha256": "70e6e0da4df07241e7cb6ef2cc27c8a354f6278b308abc792afb033e61019518"
+  },
+  {
+    "file": "assets/official/sfx/mixed_gacha_star_3.mp3",
+    "url": "https://raw.githubusercontent.com/ArknightsAssets/ArknightsAssets2/voice/assets/dyn/audio/sound_beta_2/beta1leaveover/mixed_gacha_star_3.mp3",
+    "sha256": "1dc5b1c4378aaff0589eea0d8bf11afb8c7ee08059a140ef2394365f73ef2f36"
+  },
+  {
+    "file": "assets/official/sfx/mixed_gacha_star_4.mp3",
+    "url": "https://raw.githubusercontent.com/ArknightsAssets/ArknightsAssets2/voice/assets/dyn/audio/sound_beta_2/beta1leaveover/mixed_gacha_star_4.mp3",
+    "sha256": "6ebaff264084614631fb1bbb08594fe7375d6c4aadf968137036e083e9def24f"
+  },
+  {
+    "file": "assets/official/sfx/mixed_gacha_star_6.mp3",
+    "url": "https://raw.githubusercontent.com/ArknightsAssets/ArknightsAssets2/voice/assets/dyn/audio/sound_beta_2/beta1leaveover/mixed_gacha_star_6.mp3",
+    "sha256": "be12707b0cb2f3e5d053b3d4c01527aaf8124ead9cc9615299e418ac0e3ba3f9"
+  },
+  {
+    "file": "assets/official/music/intro.mp3",
+    "url": "https://raw.githubusercontent.com/ArknightsAssets/ArknightsAssets2/voice/assets/dyn/audio/sound_beta_2/music/beta1_180603/m_sys_void_intro.mp3",
+    "sha256": "e90a25cd073741f247474fa6e6462fba96496f2924c4067380531c87f667d9ce"
+  },
+  {
+    "file": "assets/official/music/loop.mp3",
+    "url": "https://raw.githubusercontent.com/ArknightsAssets/ArknightsAssets2/voice/assets/dyn/audio/sound_beta_2/music/beta1_180603/m_sys_void_loop.mp3",
+    "sha256": "ad8b8a15ec20d839fb7bc96bf849d296986efa68bf558cbc28b4b3f5bc4a6acb"
+  }
+]

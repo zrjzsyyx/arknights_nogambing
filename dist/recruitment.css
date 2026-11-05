@@ -1,0 +1,75 @@
+/* Recruitment uses the original gacha scene textures, faction logos and class plates. */
+#reveal-stage{position:relative;height:100dvh;min-height:0;overflow:hidden;isolation:isolate;background:#111416}
+.reveal-backdrop{position:absolute;inset:0;z-index:-3;background:#181c1e url('assets/official/reveal/reveal-background.webp') center/cover no-repeat;filter:saturate(.25)}
+.reveal-backdrop:after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 53% 42%,transparent 15%,#0006 75%),linear-gradient(0deg,#000c,transparent 26%,transparent 80%,#0004)}
+#reveal-stage:before{content:'';position:absolute;z-index:-1;left:21%;top:-7%;width:74%;height:113%;background:url('assets/official/reveal/beijing_05.webp') center/contain no-repeat;opacity:.88;pointer-events:none}
+.reveal-faction{position:absolute;left:29%;top:17%;width:30%;height:48%;z-index:-1;display:grid;place-items:center}
+.reveal-faction>img{width:100%;height:100%;object-fit:contain;opacity:.92;filter:brightness(0) invert(1)}
+#reveal-stage>#reveal-art{position:absolute;z-index:1;left:13%;right:auto;top:5%;bottom:auto;width:82%;height:95%;max-width:none;object-fit:contain;object-position:50% 100%;filter:none;transform:none;pointer-events:none}
+#reveal-stage .reveal-info{position:absolute;left:38%;right:auto;top:58%;bottom:auto;width:58%;z-index:4;margin:0;padding:0;background:none;transform:none;opacity:1;color:white}
+#reveal-stage .reveal-stars{display:flex;align-items:center;justify-content:flex-start;gap:0;height:12vh;width:auto;margin:0;padding:0;font-size:0;filter:drop-shadow(0 0 1px #fff)}
+#reveal-stage .reveal-stars>img{display:block;width:11vh;height:11vh;object-fit:contain;margin-right:-1.2vh}
+.reveal-identity{display:flex;gap:.6vw;align-items:flex-start;margin-left:-1.4vw}
+#reveal-profession{width:17.5vh;height:8.75vh;object-fit:contain;margin-top:1vh;flex-shrink:0}
+#reveal-stage .reveal-info h2{font-family:'Songti SC','STSong','SimSun',serif;font-size:calc(10vh * var(--name-scale,1));font-weight:900;font-style:italic;line-height:1.08;letter-spacing:.01em;margin:0;color:#fff;-webkit-text-fill-color:#fff;-webkit-text-stroke:2px #282a29;paint-order:stroke fill;text-shadow:2px 2px 0 #191c1f;white-space:nowrap}
+#reveal-stage .reveal-en{font:400 4vh/1.1 Bender,Arial,sans-serif;letter-spacing:0;margin:.2vh 0 0;color:#d6d9d7;-webkit-text-stroke:.7px #252729;text-shadow:none;white-space:nowrap}
+#reveal-new{position:absolute;left:-3.8vw;top:21vh;width:8vw;height:auto;max-width:115px;transform:rotate(-8deg)}
+.reveal-subtitles{position:absolute;bottom:0;left:0;right:0;min-height:15.5%;z-index:5;display:flex;align-items:center;justify-content:center;padding:14px 0;background:linear-gradient(transparent,#000d 60%);pointer-events:none}
+#reveal-subtitle{width:66%;max-width:1100px;margin:0;color:white;font:400 clamp(14px,2.6vh,var(--subtitle-size,21px))/1.45 var(--sans);text-shadow:0 1px 2px #000;text-align:left;min-height:2.9em}
+#reveal-stage .reveal-bottom{position:absolute;z-index:6;left:3%;right:3%;bottom:2.5%;display:flex;justify-content:space-between;align-items:center;margin:0;pointer-events:none}
+#reveal-stage .reveal-bottom>span{font:12px var(--mono);color:#ccc;opacity:.65}
+#reveal-stage .reveal-bottom>div{display:flex;gap:8px;align-items:center;pointer-events:auto}
+#reveal-stage .reveal-bottom button{font:10px var(--sans);background:#1117;border:1px solid #fff3;padding:7px 10px;color:#eee;opacity:.7;backdrop-filter:blur(3px)}
+#reveal-stage .reveal-bottom button:hover,#reveal-stage .reveal-bottom button:focus-visible{opacity:1;border-color:white}
+#reveal-stage #reveal-voice{font-size:20px;padding:0 8px;line-height:30px;min-width:32px}
+.reveal-native-particles{position:absolute;inset:0;z-index:2;pointer-events:none;overflow:hidden}
+.reveal-native-particles>i{position:absolute;left:var(--x);top:var(--y);width:var(--size);height:var(--size);background:var(--tone);mask:url('assets/official/reveal/sanjiao_01.webp') center/contain no-repeat;filter:drop-shadow(0 0 7px var(--tone));opacity:.8;animation:native-triangle var(--duration) linear infinite;animation-delay:var(--delay)}
+.reveal-flare{position:absolute;inset:0;z-index:3;pointer-events:none;opacity:0;background:radial-gradient(ellipse at 52% 48%,#fff,transparent 68%);mix-blend-mode:screen}
+#reveal-stage.entering>#reveal-art{animation:native-recruit-art var(--entry-time) ease-out both}
+#reveal-stage.entering .reveal-info{animation:native-recruit-info var(--entry-time) ease-out both}
+#reveal-stage.entering .reveal-faction,#reveal-stage.entering:before{animation:native-recruit-logo var(--entry-time) ease-out both}
+#reveal-stage.entering .reveal-flare{animation:native-recruit-flare var(--entry-time) ease-out both}
+#reveal-stage.instant>#reveal-art,#reveal-stage.instant .reveal-info,#reveal-stage.instant .reveal-faction,#reveal-stage.instant:before{animation:none!important}
+#reveal-stage.instant .reveal-flare{display:none}
+@keyframes native-recruit-art{0%,45%{filter:brightness(0);opacity:0;transform:translateY(10px)}12%{opacity:1}46%{opacity:1;filter:brightness(0)}70%{opacity:1;filter:brightness(2.8);transform:none}100%{filter:brightness(1);opacity:1;transform:none}}
+@keyframes native-recruit-info{0%,45%{opacity:0;transform:translateY(12px)}70%,100%{opacity:1;transform:none}}
+@keyframes native-recruit-logo{0%,65%{opacity:0}100%{opacity:.92}}
+@keyframes native-recruit-flare{0%,48%{opacity:0}65%{opacity:1}100%{opacity:0}}
+@keyframes native-triangle{0%{transform:translateY(40px);opacity:0}20%,65%{opacity:.8}100%{transform:translateY(-65px);opacity:0}}
+@media(min-aspect-ratio:2.04){#reveal-stage{margin:0 auto;width:calc(100dvh * 2.04);max-width:100%}.experience[data-phase='reveal']{background:repeating-linear-gradient(0deg,#222,#151515 2px,#111 3px)}.experience[data-phase='reveal']:before,.experience[data-phase='reveal']:after{content:'';position:absolute;top:12%;bottom:12%;width:6px;background:linear-gradient(#bbb 0 3px,transparent 3px calc(100% - 3px),#bbb calc(100% - 3px));z-index:4;opacity:.4}.experience[data-phase='reveal']:before{left:1.5%}.experience[data-phase='reveal']:after{right:1.5%}}
+@media(max-width:600px) and (orientation:portrait){#reveal-stage>#reveal-art{left:-31%;top:3%;width:165%;height:81%;object-position:center bottom}.reveal-faction{left:5%;top:21%;width:63%;height:33%}#reveal-stage:before{left:-35%;top:11%;width:160%;height:76%}#reveal-stage .reveal-info{left:24%;top:61%;width:76%}#reveal-stage .reveal-stars{height:8vh}#reveal-stage .reveal-stars>img{width:7.5vh;height:7.5vh;margin-right:-1vh}#reveal-profession{width:11.8vh;height:5.9vh;margin-top:.5vh}#reveal-stage .reveal-info h2{font-size:calc(6.2vh * var(--name-scale,1))}#reveal-stage .reveal-en{font-size:2.6vh}.reveal-identity{margin-left:-4vw;gap:1vw}#reveal-new{left:-13%;top:15vh;width:21vw}.reveal-subtitles{min-height:18%;padding:12px 0 35px}#reveal-subtitle{width:88%;font-size:14px}#reveal-stage .reveal-bottom{bottom:1.5%}#reveal-stage .reveal-bottom button{font-size:9px;padding:7px}.reveal-native-particles>i{width:calc(var(--size)*.7);height:calc(var(--size)*.7)}}
+@media(prefers-reduced-motion:reduce){#reveal-stage *{animation:none!important}.reveal-flare{display:none}}
+/* Original recruit_ten_result_state particle textures retain their RGB and alpha. */
+.results-stage{background:#080909}
+.results-stage:before{content:'';position:absolute;inset:0;pointer-events:none;background:linear-gradient(#000 0%,#000e 22%,#0007 57%,transparent),url('assets/official/reveal/reveal-background.webp') center/cover no-repeat;filter:saturate(.15);opacity:.9}
+.result-card .result-light{background:none!important;opacity:1;overflow:hidden;mix-blend-mode:screen}
+.result-light:before,.result-light:after{display:none!important}
+.result-beam{display:block;position:absolute;left:0;right:0;top:0;height:46%;background:url('assets/official/reveal/result_beam_4.webp') center/100% 100% no-repeat;filter:brightness(.8) saturate(2);animation:result-native-pulse 3.7s ease-in-out infinite;animation-delay:calc(var(--i)*-.37s)}
+.result-beam:after{content:'';position:absolute;inset:0;background:inherit;transform:translateY(114%)}
+.result-card[data-rarity='3'] .result-beam{display:none}
+/* Fit the luminous body, leaving its wide source halo to the separate flare layer.
+   Source mid-row alpha cores: 5★ x14..106 of149, 6★ x65..199 of307. */
+.result-card[data-rarity='5'] .result-beam{background-image:url('assets/official/reveal/result_beam_5.webp');background-size:161.96% 100%;background-position:24.56% 50%;filter:url('#result-five-tint') brightness(1.12)}
+.result-card[data-rarity='6'] .result-beam{background-image:url('assets/official/reveal/result_beam_6.webp');background-size:229.1% 100%;background-position:37.57% 50%;filter:brightness(1.35)}
+.result-halo{position:absolute;display:block;width:260%;left:-80%;height:38%;bottom:8%;background:url('assets/official/reveal/result_guangxiao_03.webp') center/100% 100% no-repeat;opacity:.9;filter:brightness(1.5);mix-blend-mode:screen}
+.result-card[data-rarity='4'] .result-halo{filter:brightness(1.6) drop-shadow(0 0 9px #baa1ff)}
+.result-card[data-rarity='5'] .result-halo,.result-card[data-rarity='6'] .result-halo{filter:brightness(1.8) drop-shadow(0 0 9px #ffb54d)}
+.result-dots{display:none}
+.result-card[data-rarity='6'] .result-dots{display:block;position:absolute;left:0;right:0;top:10%;height:24%;background:url('assets/official/reveal/result_dianzhen_01.webp') 50% 0/160% auto repeat-y;mask-image:linear-gradient(transparent,#000 35%,#000 85%,transparent);mix-blend-mode:screen;filter:brightness(1.15);opacity:.8;animation:native-diamond-flow 6s linear infinite}
+.result-card .result-portrait{background:#3a3a3a url('assets/official/reveal/result_back_low_1_3.webp') center/100% 100% no-repeat}
+.result-card[data-rarity='4'] .result-portrait{background-image:url('assets/official/reveal/result_back_four.webp')}
+.result-card[data-rarity='5'] .result-portrait,.result-card[data-rarity='6'] .result-portrait{background-image:url('assets/official/reveal/result_back_five.webp')}
+.result-card .result-portrait:after{content:'';position:absolute;inset:0;pointer-events:none;background:#fff;mix-blend-mode:screen;opacity:0;animation:result-native-scan .8s ease-out both;animation-delay:calc(.35s + var(--i)*.06s)}
+.result-card .card-stars{display:flex;align-items:center;justify-content:center;height:auto;font-size:0;line-height:0;filter:drop-shadow(0 0 5px var(--rarity));text-shadow:none}
+.result-card .card-stars>img{position:static;width:auto;height:3.8vh;max-width:104%;max-height:42px;object-fit:contain;filter:none;transform:none}
+.result-card .card-stars:before{content:'';position:absolute;z-index:-1;left:-14%;right:-14%;top:-1.3vh;height:5vh;mix-blend-mode:screen;background:url('assets/official/reveal/result_guangxiao_03.webp') center/100% 100% no-repeat;filter:brightness(2.5) blur(6px);opacity:.55;pointer-events:none}
+.result-card[data-rarity='3'] .card-stars:before{display:none}
+#experience #skip-animation{background:transparent url('assets/official/reveal/sprite_btn_skip.webp') center/contain no-repeat;border:0;width:72px;height:56px;padding:0;font-size:0!important;color:transparent!important;min-width:0}
+#skip-animation>b{display:none}
+.results-stage .result-card{animation:result-native-enter .7s cubic-bezier(.2,.7,.2,1) both;animation-delay:calc(var(--i)*45ms)}
+@keyframes result-native-enter{from{opacity:0;transform:translateY(calc(60px - var(--i)*9px))}to{opacity:1;transform:none}}
+@keyframes result-native-scan{0%{opacity:0}20%{opacity:1}100%{opacity:0}}
+@keyframes result-native-pulse{0%,100%{opacity:.84}48%{opacity:1}}
+@keyframes native-diamond-flow{0%{transform:translateY(-3%);opacity:.8}50%{opacity:1}100%{transform:translateY(3%);opacity:.8}}
+@media(max-width:600px) and (orientation:portrait){.result-card .card-stars>img{height:27px}.results-stage:before{position:fixed}}
+@media(prefers-reduced-motion:reduce){.result-beam,.result-dots,.results-stage .result-card,.result-portrait:after{animation:none!important}}

@@ -1,0 +1,247 @@
+{
+  "resourceVersion": "26-10-29-15-36-11-33649006",
+  "bag": {
+    "url": "https://ak.hycdn.cn/assetbundle/official/Android/assets/26-10-29-15-36-11-33649006/prefabs_gacha_gacha_phase_0.dat",
+    "md5": "8f3b12d9896e74c88a70bdd45890b0f1",
+    "meshes": "Original S_Bag meshes and skin/bind matrices",
+    "animations": [
+      "gacha_bag_start",
+      "gacha_bag_open",
+      "gacha_main_cam_start",
+      "gacha_main_cam_loop",
+      "gacha_main_cam_shake"
+    ],
+    "conversion": "Original position, rotation and scale curves resampled at 60 Hz with cubic Hermite interpolation; original textures losslessly converted to WebP"
+  },
+  "ui": {
+    "url": "https://ak.hycdn.cn/assetbundle/official/Android/assets/26-10-29-15-36-11-33649006/ui_gacha_limited_79_0_1.dat",
+    "md5": "493fa4ef45346d85a7eef2e4cc5da6c2",
+    "conversion": "Original RectTransform hierarchy, anchors, pivots and scales. Trimmed Sprite images restored to their full m_Rect canvas using textureRectOffset, then losslessly encoded. PreserveAspect is retained. Runtime labels adapted for the browser.",
+    "highQualitySprites": {
+      "url": "https://ak.hycdn.cn/assetbundle/official/Windows/assets/26-10-29-15-35-15-96278206/ui_gacha_limited_79_0_1.dat",
+      "md5": "818832e8417885ba07220b05ee1aff20",
+      "sourceFormat": "PC BC7, replacing mobile ASTC copies for the background and featured characters",
+      "nativeCanvasSizes": {
+        "bg": [
+          1024,
+          527
+        ],
+        "char_01": [
+          1200,
+          1000
+        ],
+        "char_02": [
+          1300,
+          1000
+        ]
+      }
+    }
+  },
+  "audio": {
+    "mirror": "https://github.com/ArknightsAssets/ArknightsAssets2/tree/voice/assets/dyn/audio/sound_beta_2",
+    "routing": "https://raw.githubusercontent.com/yuanyan3060/ArknightsGameResource/main/gamedata/excel/audio_data.json",
+    "bgmEvent": "sys.ON_SCENE_LOADED.home",
+    "bgmFiles": [
+      "Music/beta1_180603/m_sys_void_intro",
+      "Music/beta1_180603/m_sys_void_loop"
+    ],
+    "note": "The default client interface theme is used. Custom client home themes can differ. Regular interface buttons use the original g_ui_btn_h sample; g_ui_btn_n was unavailable in the public mirror."
+  },
+  "fonts": "https://github.com/TimWangZi/The-font-of-Arknights",
+  "renderer": "Three.js 0.160.1 (MIT); original meshes, bones and textures, with web lighting and glow adaptation. Unity particle shaders and every client UI transition are not reproduced pixel for pixel.",
+  "files": [
+    {
+      "file": "assets/official/music/intro.mp3",
+      "duration": 34.0,
+      "sha256": "e90a25cd073741f247474fa6e6462fba96496f2924c4067380531c87f667d9ce"
+    },
+    {
+      "file": "assets/official/music/loop.mp3",
+      "duration": 128.0,
+      "sha256": "ad8b8a15ec20d839fb7bc96bf849d296986efa68bf558cbc28b4b3f5bc4a6acb"
+    },
+    {
+      "file": "assets/official/sfx/g_card_10cardsrelease.mp3",
+      "duration": 0.897392,
+      "sha256": "0275bcb119b184c498cb1d22abecc3807aafd234d23344f3a815a32edb7903b3"
+    },
+    {
+      "file": "assets/official/sfx/g_card_1cardrelease.mp3",
+      "duration": 0.837143,
+      "sha256": "9baba84c9bb7026d5bc0ead5b6a768474462b0f645914bb51e1c489456a64813"
+    },
+    {
+      "file": "assets/official/sfx/g_card_checkout.mp3",
+      "duration": 2.822449,
+      "sha256": "21d7bafaf798732f9ed10529e40567b375d9a98573d84baa91e4e2d2932551ae"
+    },
+    {
+      "file": "assets/official/sfx/g_card_pad_n.mp3",
+      "duration": 18.06585,
+      "sha256": "28302fc2088b1570257ce4375a08df524fcb3d1983fdaaad34e4ede1f5c7809c"
+    },
+    {
+      "file": "assets/official/sfx/g_card_pad_r.mp3",
+      "duration": 17.598912,
+      "sha256": "d82e9276ad219a1f59f9dff9721bd4fec79c6dbad5bba144342f478ed32421db"
+    },
+    {
+      "file": "assets/official/sfx/g_card_pad_sr.mp3",
+      "duration": 19.967732,
+      "sha256": "5cb5357d1206cf665756758fca645752e9260b5e84f6582ed8453861a50ee700"
+    },
+    {
+      "file": "assets/official/sfx/g_card_pad_ssr.mp3",
+      "duration": 30.220159,
+      "sha256": "2688c4522a157babbc4259342038c2f1fe532e3d0ad4474bac548e0a484586dc"
+    },
+    {
+      "file": "assets/official/sfx/g_card_shining1_n.mp3",
+      "duration": 2.18424,
+      "sha256": "674dfb74afef37be5b5c4e17350946aa2184d5c33cf4382f00a2f108aed15813"
+    },
+    {
+      "file": "assets/official/sfx/g_card_shining1_ssr.mp3",
+      "duration": 1.709887,
+      "sha256": "eb022f70942dc64388564dc63fe4e0d8e8114aa28eaf293e3a006371cc64685d"
+    },
+    {
+      "file": "assets/official/sfx/g_card_shining2_n.mp3",
+      "duration": 2.41737,
+      "sha256": "ef4e5723e7ed474501e127e9cf0c064cbf57453f9b14b3f4c02b5b339f7c3a33"
+    },
+    {
+      "file": "assets/official/sfx/g_card_shining2_ssr.mp3",
+      "duration": 1.668934,
+      "sha256": "4af75347e81dfb959bfc2b48b90ed4b8eadfd5a9498d1975372ebc4767f4be6d"
+    },
+    {
+      "file": "assets/official/sfx/g_card_shining3_n.mp3",
+      "duration": 3.831837,
+      "sha256": "94b65d0c69b49a8be7a5704b78c589830012ea0da416c76eb6d41bd4504888c2"
+    },
+    {
+      "file": "assets/official/sfx/g_card_shining3_ssr.mp3",
+      "duration": 1.695873,
+      "sha256": "f5b54526eba103b96bcf2eadb8f2d5c96e6c68c6db9c8e371965e3d37ac1780d"
+    },
+    {
+      "file": "assets/official/sfx/g_card_shining4_n.mp3",
+      "duration": 4.143197,
+      "sha256": "43cf9f1daab172e23ed0b2caf6793de2bd31146e6a1b8795ad84e46749c3a3b5"
+    },
+    {
+      "file": "assets/official/sfx/g_card_shining4_ssr.mp3",
+      "duration": 4.135057,
+      "sha256": "46ccbed791bb18aee24d1642beb2946df957d429818e228635a4b42ca79ca855"
+    },
+    {
+      "file": "assets/official/sfx/g_card_zipper.mp3",
+      "duration": 0.145238,
+      "sha256": "c7521826ad1614cd1a391dbf4caa0df35fc20ea5194dd3475da77d53551fe89e"
+    },
+    {
+      "file": "assets/official/sfx/g_ui_10cards.mp3",
+      "duration": 5.325938,
+      "sha256": "c4cbc19e9522b321ad57866432b6f32eb1f87ccaf4baf30428fffe43774002a5"
+    },
+    {
+      "file": "assets/official/sfx/g_ui_btn_h.mp3",
+      "duration": 0.459546,
+      "sha256": "e26cc3ee82b9be37e3e9554eb195c5f817ad6c6c0d166904569a1314ea972770"
+    },
+    {
+      "file": "assets/official/sfx/g_ui_btn_u.mp3",
+      "duration": 0.328617,
+      "sha256": "784e0a4ff8afed6668729f257230747b66f158e42d8bbac4c0bca1825fb17d8e"
+    },
+    {
+      "file": "assets/official/sfx/g_ui_charentry.mp3",
+      "duration": 0.915351,
+      "sha256": "24fd3e43e4262e3df177cd73525cbb2f1954c78427a86663fa48d494003e8a6b"
+    },
+    {
+      "file": "assets/official/sfx/g_ui_confirm_h.mp3",
+      "duration": 0.90458,
+      "sha256": "da1518c982bb7c8035aa74fbe71d1632044dc43c596e2766337318a70e9e7f9b"
+    },
+    {
+      "file": "assets/official/sfx/g_ui_packagedrop.mp3",
+      "duration": 1.828027,
+      "sha256": "803e611fda1abd15352e44bfe953fb1e30d8a26eb531ba181adf0dd60327b22b"
+    },
+    {
+      "file": "assets/official/sfx/mixed_gacha_part1.mp3",
+      "duration": 5.336979,
+      "sha256": "7288d9407eae4bfcef8af8e95310ed051a29727cc52c42a9564be90ed13add39"
+    },
+    {
+      "file": "assets/official/sfx/mixed_gacha_part2.mp3",
+      "duration": 6.241042,
+      "sha256": "1cc615b64a92ff913ad92d9b976b39d123dd699eaa134825e85e55ff7301ecdf"
+    },
+    {
+      "file": "assets/official/sfx/mixed_gacha_star_1.mp3",
+      "duration": 1.271042,
+      "sha256": "0efb268b01220fc88a2dc7a507f647e95b116238b8d22c62347aaf79a5e3ea59"
+    },
+    {
+      "file": "assets/official/sfx/mixed_gacha_star_2.mp3",
+      "duration": 1.365479,
+      "sha256": "70e6e0da4df07241e7cb6ef2cc27c8a354f6278b308abc792afb033e61019518"
+    },
+    {
+      "file": "assets/official/sfx/mixed_gacha_star_3.mp3",
+      "duration": 1.448667,
+      "sha256": "1dc5b1c4378aaff0589eea0d8bf11afb8c7ee08059a140ef2394365f73ef2f36"
+    },
+    {
+      "file": "assets/official/sfx/mixed_gacha_star_4.mp3",
+      "duration": 1.567771,
+      "sha256": "6ebaff264084614631fb1bbb08594fe7375d6c4aadf968137036e083e9def24f"
+    },
+    {
+      "file": "assets/official/sfx/mixed_gacha_star_5.mp3",
+      "duration": 1.6955,
+      "sha256": "4466826f8a889c27fe82fa1cbc239405e7dcbc8cdd5a7b468171d08ba793295a"
+    },
+    {
+      "file": "assets/official/sfx/mixed_gacha_star_6.mp3",
+      "duration": 1.792336,
+      "sha256": "be12707b0cb2f3e5d053b3d4c01527aaf8124ead9cc9615299e418ac0e3ba3f9"
+    }
+  ],
+  "results": {
+    "portraits": "https://github.com/ArknightsAssets/ArknightsAssets2/tree/cn/assets/dyn/arts/charportraits",
+    "professions": "https://github.com/ArknightsAssets/ArknightsAssets2/tree/cn/assets/dyn/arts/ui/%5Buc%5Dcharcommon/dynprofession",
+    "portraitCount": 169,
+    "professionCount": 8,
+    "conversion": "Original 180x360 client portraits and original profession symbols, losslessly cached. Browser layout and light columns follow in-game screenshots; they are not the Unity result shader.",
+    "effects": {
+      "url": "https://ak.hycdn.cn/assetbundle/official/Android/assets/26-10-29-15-36-11-33649006/ui_recruit_states_recruit_ten_result_state.dat",
+      "md5": "8954e8df64c9a6e202fb707d9d705f45",
+      "bundle": "ui/recruit/states/recruit_ten_result_state.ab",
+      "conversion": "Original source pixels losslessly encoded; optional alpha crops remove only wholly transparent atlas margins. Colored rarity textures retain original RGB and alpha. No generated light artwork.",
+      "md5Scope": "Unpacked ui/recruit/states/recruit_ten_result_state.ab",
+      "archiveMd5": "be971a18d10c71fd6a503949785e6453"
+    }
+  },
+  "recruitment": {
+    "source": {
+      "url": "https://ak.hycdn.cn/assetbundle/official/Android/assets/26-10-29-15-36-11-33649006/prefabs_gacha_gacha_phase_1.dat",
+      "md5": "9a647120947966f4031532763a352d6c",
+      "conversion": "Original client textures and Sprite pixels losslessly converted. Cropped backgrounds remove only transparent borders. Layout and material/particle settings exported for browser adaptation.",
+      "factions": "https://raw.githubusercontent.com/ArknightsAssets/ArknightsAssets2/cn/assets/dyn/arts/camplogo/",
+      "professions": "https://raw.githubusercontent.com/ArknightsAssets/ArknightsAssets2/cn/assets/dyn/arts/profession_hub/",
+      "campMapping": "character_table teamId, then groupId, then nationId; first existing original camp logo. All 169 operators resolve without substitution.",
+      "md5Scope": "Unpacked prefabs/gacha/gacha_phase_1.ab",
+      "archiveMd5": "79eb95dbb5f296852a7c2e58532103a8"
+    },
+    "manifest": "reveal-assets.json",
+    "voices": "voices.json",
+    "voiceLanguage": "ja",
+    "voiceLine": "CN_011 / GACHA",
+    "voiceSource": "https://torappu.prts.wiki/assets/audio/voice/",
+    "voiceConversion": "Original performances converted WAV to MP3; no trimming, speed, pitch, or synthesized speech. Original Chinese subtitles from client charword_table."
+  }
+}

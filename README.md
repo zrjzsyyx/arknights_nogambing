@@ -7,6 +7,8 @@
 
 ## 2.使用方式
 
+可以直接[在线体验](https://zrjzsyyx.github.io/arknights_nogambing/)，也可以下载到本地运行：
+
 1. [下载项目压缩包](https://github.com/zrjzsyyx/arknights_nogambing/archive/refs/heads/main.zip)，完整解压后，双击文件夹里的 `index.html`，用浏览器打开。
 2. 选择单抽或十连。开包时，按住右侧的拉链头向左拖动，也可以点击按钮直接开包。
 3. 干员登场时会播放日语报到语音，并显示中文字幕。十连可以逐个查看干员，也可以跳过动画，直接看全部结果。

@@ -1,0 +1,254 @@
+[
+  {
+    "file": "assets/official/pools/limited_70_0_1/anim_bg1.webp",
+    "source": "https://raw.githubusercontent.com/ArknightsAssets/ArknightsAssets2/cn/assets/dyn/ui/gacha/limited_70_0_1/anim_bg1.png",
+    "sha256": "b364b512c75b5235ec97973f5895ae94d02e13763f13f2901277aa1d7aa04369",
+    "conversion": "Original client pixels, lossless WebP"
+  },
+  {
+    "file": "assets/official/pools/limited_70_0_1/anim_bg2.webp",
+    "source": "https://raw.githubusercontent.com/ArknightsAssets/ArknightsAssets2/cn/assets/dyn/ui/gacha/limited_70_0_1/anim_bg2.png",
+    "sha256": "29ac626e5c4f8731231aa87b099c0e8298f7af93e6485b30a1e0c3c9ad923907",
+    "conversion": "Original client pixels, lossless WebP"
+  },
+  {
+    "file": "assets/official/pools/limited_70_0_1/bk.webp",
+    "source": "https://raw.githubusercontent.com/ArknightsAssets/ArknightsAssets2/cn/assets/dyn/ui/gacha/limited_70_0_1/bk.png",
+    "sha256": "0d5427247563266340b1c55bad7af3f0210c2811bd466e92558e498b9f27edab",
+    "conversion": "Original client pixels, lossless WebP"
+  },
+  {
+    "file": "assets/official/pools/limited_70_0_1/c1_char.webp",
+    "source": "https://raw.githubusercontent.com/ArknightsAssets/ArknightsAssets2/cn/assets/dyn/ui/gacha/limited_70_0_1/c1_char.png",
+    "sha256": "5a2cb86cc8e34c1fb3c38119f918b5c9fcc3999bf9db67b3d4c313f85ff3d9d4",
+    "conversion": "Original client pixels, lossless WebP"
+  },
+  {
+    "file": "assets/official/pools/limited_70_0_1/c2_char.webp",
+    "source": "https://raw.githubusercontent.com/ArknightsAssets/ArknightsAssets2/cn/assets/dyn/ui/gacha/limited_70_0_1/c2_char.png",
+    "sha256": "f0ad89639025b544d8159e7db664dd5d8b001284ea63d49656eab4b5d7072478",
+    "conversion": "Original client pixels, lossless WebP"
+  },
+  {
+    "file": "assets/official/pools/limited_70_0_1/title_1.webp",
+    "source": "https://raw.githubusercontent.com/ArknightsAssets/ArknightsAssets2/cn/assets/dyn/ui/gacha/limited_70_0_1/title_1.png",
+    "sha256": "fe21556d9dd249b1e6a89084e33ee735b54cff08bc3bafec272b3d012c3ab207",
+    "conversion": "Original client pixels, lossless WebP"
+  },
+  {
+    "file": "assets/official/pools/limited_70_0_1/title_2.webp",
+    "source": "https://raw.githubusercontent.com/ArknightsAssets/ArknightsAssets2/cn/assets/dyn/ui/gacha/limited_70_0_1/title_2.png",
+    "sha256": "08b79fdfc31ed69ad121e55855ed63acdd78a82f3499ffc8769a864c606ff505",
+    "conversion": "Original client pixels, lossless WebP"
+  },
+  {
+    "file": "assets/official/pools/limited_70_0_1/title_back.webp",
+    "source": "https://raw.githubusercontent.com/ArknightsAssets/ArknightsAssets2/cn/assets/dyn/ui/gacha/limited_70_0_1/title_back.png",
+    "sha256": "d44b7a48c2ddcaca9917ac62fe03cc69dbd9bb4c1fceabe01daeeee7f787f2af",
+    "conversion": "Original client pixels, lossless WebP"
+  },
+  {
+    "file": "assets/official/pools/limited_70_0_1/title1_main.webp",
+    "source": "https://raw.githubusercontent.com/ArknightsAssets/ArknightsAssets2/cn/assets/dyn/ui/gacha/limited_70_0_1/title1_main.png",
+    "sha256": "95e706a50add1d84e6a6af60f40a448825acea64b27d621d7df1c8c3d100164c",
+    "conversion": "Original client pixels, lossless WebP"
+  },
+  {
+    "file": "assets/official/pools/limited_70_0_1/title2_main.webp",
+    "source": "https://raw.githubusercontent.com/ArknightsAssets/ArknightsAssets2/cn/assets/dyn/ui/gacha/limited_70_0_1/title2_main.png",
+    "sha256": "a04a686853da69ebfc859b43901293d2bbf8702672f6d7217d8621bfba7cfa71",
+    "conversion": "Original client pixels, lossless WebP"
+  },
+  {
+    "file": "assets/official/pools/limited_70_0_1/btn_gacha.webp",
+    "source": "https://raw.githubusercontent.com/ArknightsAssets/ArknightsAssets2/cn/assets/dyn/ui/gacha/limited_70_0_1/btn_gacha.png",
+    "sha256": "24b5b86ddc3defe461ebc57f9fe85776fd3358ee079a65333db8029fdb19ca4e",
+    "conversion": "Original client pixels, lossless WebP"
+  },
+  {
+    "file": "assets/official/pools/limited_70_0_1/btn_10_gacha.webp",
+    "source": "https://raw.githubusercontent.com/ArknightsAssets/ArknightsAssets2/cn/assets/dyn/ui/gacha/limited_70_0_1/btn_10_gacha.png",
+    "sha256": "8241036b222c2033bcd6b07a571f545c6048040206520d883c1950139080ef1a",
+    "conversion": "Original client pixels, lossless WebP"
+  },
+  {
+    "file": "assets/official/pools/limited_70_0_1/name1.webp",
+    "source": "https://raw.githubusercontent.com/ArknightsAssets/ArknightsAssets2/cn/assets/dyn/ui/gacha/limited_70_0_1/name1.png",
+    "sha256": "362c12d79990648313e045be59e0b34809224e59eadf386f4ced5c4f44ec3cad",
+    "conversion": "Original client pixels, lossless WebP"
+  },
+  {
+    "file": "assets/official/pools/limited_70_0_1/name2.webp",
+    "source": "https://raw.githubusercontent.com/ArknightsAssets/ArknightsAssets2/cn/assets/dyn/ui/gacha/limited_70_0_1/name2.png",
+    "sha256": "c900c2978318785415ef502a2cb618698da6dc8b1037f1b090aedc1e28fd2ac6",
+    "conversion": "Original client pixels, lossless WebP"
+  },
+  {
+    "file": "assets/official/pools/limited_73_0_1/anim_bg1.webp",
+    "source": "https://raw.githubusercontent.com/ArknightsAssets/ArknightsAssets2/cn/assets/dyn/ui/gacha/limited_73_0_1/anim_bg1.png",
+    "sha256": "33f6816586b964e988f3c8d4ae840132f881cae1c6fac1b05865e2c7baf9bcd5",
+    "conversion": "Original client pixels, lossless WebP"
+  },
+  {
+    "file": "assets/official/pools/limited_73_0_1/c1_char.webp",
+    "source": "https://raw.githubusercontent.com/ArknightsAssets/ArknightsAssets2/cn/assets/dyn/ui/gacha/limited_73_0_1/c1_char.png",
+    "sha256": "76eb9d051f25a16e94a045f5af2456bb88d78ab74b83bd5a540d705d20b09353",
+    "conversion": "Original client pixels, lossless WebP"
+  },
+  {
+    "file": "assets/official/pools/limited_73_0_1/c2_char.webp",
+    "source": "https://raw.githubusercontent.com/ArknightsAssets/ArknightsAssets2/cn/assets/dyn/ui/gacha/limited_73_0_1/c2_char.png",
+    "sha256": "96df6ca5929253cb852316bd5c0042ab8e733631589f77d7e76e167e2e7a64ef",
+    "conversion": "Original client pixels, lossless WebP"
+  },
+  {
+    "file": "assets/official/pools/limited_73_0_1/char_01-sharp.webp",
+    "source": "https://raw.githubusercontent.com/ArknightsAssets/ArknightsAssets2/cn/assets/dyn/ui/gacha/limited_73_0_1/char_01%5B%232%5D.png",
+    "sha256": "ff6812fa3b2e75314130368dfe8acd0a1e016ccdf92d92bc503724247f9cc655",
+    "conversion": "Original client pixels, lossless WebP"
+  },
+  {
+    "file": "assets/official/pools/limited_73_0_1/char_02-sharp.webp",
+    "source": "https://raw.githubusercontent.com/ArknightsAssets/ArknightsAssets2/cn/assets/dyn/ui/gacha/limited_73_0_1/char_02%5B%232%5D.png",
+    "sha256": "01e8365cec5dc8b9405db0b2822e1cd7d75191cf47bff95b3c7a74ae7e235ed4",
+    "conversion": "Original client pixels, lossless WebP"
+  },
+  {
+    "file": "assets/official/pools/limited_73_0_1/title_main.webp",
+    "source": "https://raw.githubusercontent.com/ArknightsAssets/ArknightsAssets2/cn/assets/dyn/ui/gacha/limited_73_0_1/title_main.png",
+    "sha256": "6fd9b5a901dbea32156c390a0723720a728d01a111c3cb54f46f59c9159534c2",
+    "conversion": "Original client pixels, lossless WebP"
+  },
+  {
+    "file": "assets/official/pools/limited_73_0_1/title_main_image.webp",
+    "source": "https://raw.githubusercontent.com/ArknightsAssets/ArknightsAssets2/cn/assets/dyn/ui/gacha/limited_73_0_1/title_main_image.png",
+    "sha256": "ede77c1f3d894f07469b6fb076f2f67169178126471ecb07aeef38b3b0bcc8d2",
+    "conversion": "Original client pixels, lossless WebP"
+  },
+  {
+    "file": "assets/official/pools/limited_73_0_1/title_bg_circle.webp",
+    "source": "https://raw.githubusercontent.com/ArknightsAssets/ArknightsAssets2/cn/assets/dyn/ui/gacha/limited_73_0_1/title_bg_circle.png",
+    "sha256": "112a39323b97c6ff1dcc7aae3b829dbf6541297b00b3b8f51ccffeb957b5b8fe",
+    "conversion": "Original client pixels, lossless WebP"
+  },
+  {
+    "file": "assets/official/pools/limited_73_0_1/btn_gacha.webp",
+    "source": "https://raw.githubusercontent.com/ArknightsAssets/ArknightsAssets2/cn/assets/dyn/ui/gacha/limited_73_0_1/btn_gacha.png",
+    "sha256": "24b5b86ddc3defe461ebc57f9fe85776fd3358ee079a65333db8029fdb19ca4e",
+    "conversion": "Original client pixels, lossless WebP"
+  },
+  {
+    "file": "assets/official/pools/limited_73_0_1/btn_10_gacha.webp",
+    "source": "https://raw.githubusercontent.com/ArknightsAssets/ArknightsAssets2/cn/assets/dyn/ui/gacha/limited_73_0_1/btn_10_gacha.png",
+    "sha256": "8241036b222c2033bcd6b07a571f545c6048040206520d883c1950139080ef1a",
+    "conversion": "Original client pixels, lossless WebP"
+  },
+  {
+    "file": "assets/official/pools/limited_73_0_1/name1.webp",
+    "source": "https://raw.githubusercontent.com/ArknightsAssets/ArknightsAssets2/cn/assets/dyn/ui/gacha/limited_73_0_1/name1.png",
+    "sha256": "71100c23595b3569cf638830e0e3d8eb3edd6143b64c44080553735cfcd5aa82",
+    "conversion": "Original client pixels, lossless WebP"
+  },
+  {
+    "file": "assets/official/pools/limited_73_0_1/name2.webp",
+    "source": "https://raw.githubusercontent.com/ArknightsAssets/ArknightsAssets2/cn/assets/dyn/ui/gacha/limited_73_0_1/name2.png",
+    "sha256": "9530684052f3a2209ea0c4d8c91b0422f416a4389d2981086795e7c1f8d74828",
+    "conversion": "Original client pixels, lossless WebP"
+  },
+  {
+    "file": "assets/official/pools/limited_76_0_1/chara_01_dubble.webp",
+    "source": "https://raw.githubusercontent.com/ArknightsAssets/ArknightsAssets2/cn/assets/dyn/ui/gacha/limited_76_0_1/chara_01_dubble.png",
+    "sha256": "1e05b8c7974d96b1d1029c1b84d6ce61ac87ad202fa8bd6838724a4fc55d3d07",
+    "conversion": "Original client pixels, lossless WebP"
+  },
+  {
+    "file": "assets/official/pools/limited_76_0_1/chara_02_dubble.webp",
+    "source": "https://raw.githubusercontent.com/ArknightsAssets/ArknightsAssets2/cn/assets/dyn/ui/gacha/limited_76_0_1/chara_02_dubble.png",
+    "sha256": "87e26c54a14caa582fcba9ef3d4283a8e26a64ac03434c9a84ec0e24ab2bf57a",
+    "conversion": "Original client pixels, lossless WebP"
+  },
+  {
+    "file": "assets/official/pools/limited_76_0_1/chara_01_solo.webp",
+    "source": "https://raw.githubusercontent.com/ArknightsAssets/ArknightsAssets2/cn/assets/dyn/ui/gacha/limited_76_0_1/chara_01_solo.png",
+    "sha256": "0b212e12fcf4f4f9a3f4abf72aeef87ad652deb11897770fb15730bd9d531326",
+    "conversion": "Original client pixels, lossless WebP"
+  },
+  {
+    "file": "assets/official/pools/limited_76_0_1/chara_02_solor.webp",
+    "source": "https://raw.githubusercontent.com/ArknightsAssets/ArknightsAssets2/cn/assets/dyn/ui/gacha/limited_76_0_1/chara_02_solor.png",
+    "sha256": "f4a7f37ae5a09b72e197d4b6726d5192011dc53ac1acec856a627146f7be2576",
+    "conversion": "Original client pixels, lossless WebP"
+  },
+  {
+    "file": "assets/official/pools/limited_76_0_1/title.webp",
+    "source": "https://raw.githubusercontent.com/ArknightsAssets/ArknightsAssets2/cn/assets/dyn/ui/gacha/limited_76_0_1/title.png",
+    "sha256": "4a89da86b4211f6355ebb4cedc4d79669d83d404d5c6c46bcda1cd77b70a3ec7",
+    "conversion": "Original client pixels, lossless WebP"
+  },
+  {
+    "file": "assets/official/pools/limited_76_0_1/title_bg.webp",
+    "source": "https://raw.githubusercontent.com/ArknightsAssets/ArknightsAssets2/cn/assets/dyn/ui/gacha/limited_76_0_1/title_bg.png",
+    "sha256": "8823b92ef663453df70eaed9143521b5700abc798443e7a87dc2525f7e6fc6fd",
+    "conversion": "Original client pixels, lossless WebP"
+  },
+  {
+    "file": "assets/official/pools/limited_76_0_1/title_bg_water.webp",
+    "source": "https://raw.githubusercontent.com/ArknightsAssets/ArknightsAssets2/cn/assets/dyn/ui/gacha/limited_76_0_1/title_bg_water.png",
+    "sha256": "ac89ca01cc318b2f152795ab25f121c2471bd39f6ffc556977dc1e827a046736",
+    "conversion": "Original client pixels, lossless WebP"
+  },
+  {
+    "file": "assets/official/pools/limited_76_0_1/title_windmill.webp",
+    "source": "https://raw.githubusercontent.com/ArknightsAssets/ArknightsAssets2/cn/assets/dyn/ui/gacha/limited_76_0_1/title_windmill.png",
+    "sha256": "39f28c8d2eed9ac64e8884210bbfb115d7a46b2fbc80b1e31408b8cc521feea3",
+    "conversion": "Original client pixels, lossless WebP"
+  },
+  {
+    "file": "assets/official/pools/limited_76_0_1/btn_gacha.webp",
+    "source": "https://raw.githubusercontent.com/ArknightsAssets/ArknightsAssets2/cn/assets/dyn/ui/gacha/limited_76_0_1/btn_gacha.png",
+    "sha256": "24b5b86ddc3defe461ebc57f9fe85776fd3358ee079a65333db8029fdb19ca4e",
+    "conversion": "Original client pixels, lossless WebP"
+  },
+  {
+    "file": "assets/official/pools/limited_76_0_1/btn_10_gacha.webp",
+    "source": "https://raw.githubusercontent.com/ArknightsAssets/ArknightsAssets2/cn/assets/dyn/ui/gacha/limited_76_0_1/btn_10_gacha.png",
+    "sha256": "8241036b222c2033bcd6b07a571f545c6048040206520d883c1950139080ef1a",
+    "conversion": "Original client pixels, lossless WebP"
+  },
+  {
+    "file": "assets/official/pools/limited_76_0_1/chara_name_left.webp",
+    "source": "https://raw.githubusercontent.com/ArknightsAssets/ArknightsAssets2/cn/assets/dyn/ui/gacha/limited_76_0_1/chara_name_left.png",
+    "sha256": "9008c86825f84b13589bb7c0c8123a0163326d5a61b5270c57b57a2827addd68",
+    "conversion": "Original client pixels, lossless WebP"
+  },
+  {
+    "file": "assets/official/pools/limited_76_0_1/chara_name_right.webp",
+    "source": "https://raw.githubusercontent.com/ArknightsAssets/ArknightsAssets2/cn/assets/dyn/ui/gacha/limited_76_0_1/chara_name_right.png",
+    "sha256": "866efda5316ba3cc10884924017b6924dfd132c039f6ab66be8521a8b4ac8dcf",
+    "conversion": "Original client pixels, lossless WebP"
+  },
+  {
+    "file": "assets/banner-wang.webp",
+    "source": "https://web.hycdn.cn/upload/image/20260205/c6118fc204ca8726865ef5e144b610ac.jpg",
+    "sha256": "6abe06062f2e9313112fd7246d63ecf6be7cff988eb013bfc14160d0c135e6bb",
+    "conversion": "Official announcement banner, WebP quality 94"
+  },
+  {
+    "file": "assets/banner-promise.webp",
+    "source": "https://web.hycdn.cn/upload/image/20260424/6234906ca6158ffb655117ff18ef5f28.jpg",
+    "sha256": "799867d89308fbe14cfe6fd0a9cd277de60d425d5cb21d2a8bdeb07a4a68dfdd",
+    "conversion": "Official announcement banner, WebP quality 94"
+  },
+  {
+    "file": "assets/banner-summer.webp",
+    "source": "https://web.hycdn.cn/upload/image/20260724/1c47b33bf91da89f1a4184526be5f51f.jpg",
+    "sha256": "a80e72d826a75d7b7cd176332674ec035f4869188fab6bbac6b0131f044f9777",
+    "conversion": "Official announcement banner, WebP quality 94"
+  },
+  {
+    "file": "assets/banner-dungeon.webp",
+    "source": "https://web.hycdn.cn/announce/images/20240827/d56c1f70537a65eda27720899c541345.jpg",
+    "sha256": "3af6abc8759dcce4f17bf10d756754f91ecf9d80e642a3edc3f7061e116d561a",
+    "conversion": "Official announcement banner, WebP quality 94"
+  }
+]

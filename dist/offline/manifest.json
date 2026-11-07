@@ -1,13 +1,18 @@
 {
   "version": 1,
   "json": {
-    "operators.json": "94846b95724a3c54f503e9c1e56bcf5e96f3bf937f8009d54834adfbb7d7ea46",
+    "operators.json": "18c66be0d9e80cd5293dfd84d2eb64f06da218226d5e685a2dff452379df3cfe",
     "pool.json": "5cbe2b0b644a8740879acda48c60a2997633100febad019fc6b3cf765d4a04d4",
-    "voices.json": "bef6513d99649778877a9090c6ddf36344b3d31cb3068937b8f206464f39433c",
-    "reveal-assets.json": "8af218cb3d8b5fcb8ac32ee04ca60f672645e311c42e50003db9d0e19b943195",
+    "pools.json": "66b83ed02190459771ba9f209f3db59912edb3ef9a49709f8a2f7ea57fc55366",
+    "voices.json": "66baff595c9dee1dbd9a953a96431cc00b2fade3788173d1de5acf7c319f3fa3",
+    "reveal-assets.json": "5ad83736cd3d3fca69070ea7137aa530f4f722e4c6709c6702148c258ad69617",
     "music.json": "464bba4a9ceec3ae77047659818ec4fde0be9480dac5a28d15c68e56a22948fd",
     "assets/official/ui/prefab.json": "62f39a0b4b4acbb25ce89818d3bb272f394f5539b62cc6ca7999d206b6ce1797",
-    "assets/official/scene/bag.json": "2df27b955eb48e9909e8ca14ddaf7dd4d9bb47a29cbdbf59961f3afcd350711f"
+    "assets/official/scene/bag.json": "2df27b955eb48e9909e8ca14ddaf7dd4d9bb47a29cbdbf59961f3afcd350711f",
+    "assets/official/pools/limited_70_0_1/prefab.json": "b624b28242e12ceaa144c3f2a0f5d1bccf10fee6d727e2f96ec7a0d10c628df9",
+    "assets/official/pools/limited_73_0_1/prefab.json": "17da72f393729cdf93709a2cc1deebb8f38d5f3b8b323601c3af51dd3ec396f8",
+    "assets/official/pools/limited_76_0_1/prefab.json": "e7f02adbaf5a1ef6b652897b3eee8e94225409d307065befe58e6940d2ea15df",
+    "assets/official/pools/linkage_54_0_1/prefab.json": "63cf705f0d9c179d78318d7e7b96f1f286cb9cbd9c901297cd59df0ec1ad047d"
   },
   "images": {
     "assets/official/scene/-3074318600099535578.webp": "9e04d66f8a85c7c7c0f42a012ade22c8bbf11bff0199cb89ba7371de4c6d6569",
@@ -193,15 +198,35 @@
       "bytes": 29510,
       "sha256": "be12707b0cb2f3e5d053b3d4c01527aaf8124ead9cc9615299e418ac0e3ba3f9"
     },
+    "assets/official/voices/char_003_kalts.mp3": {
+      "chunk": "offline/audio/05b1fcf4dfb3985f9c37.js",
+      "bytes": 154240,
+      "sha256": "aa032c1914d2879db3857eee3b9408e5fc2a05467c7719e83da21e4a7dd0e9b0"
+    },
     "assets/official/voices/char_1012_skadi2.mp3": {
       "chunk": "offline/audio/1d89a8df3efb9469b160.js",
       "bytes": 318062,
       "sha256": "16d647016827f3494faf75974d1c52e89465c9ddfec34265d13434166ea02de3"
     },
+    "assets/official/voices/char_1013_chen2.mp3": {
+      "chunk": "offline/audio/7b76124480d5c82b28ac.js",
+      "bytes": 211515,
+      "sha256": "44b734b98b44f58f7d53810af78344921428822294fe2057e93a82d33238a3e6"
+    },
     "assets/official/voices/char_1014_nearl2.mp3": {
       "chunk": "offline/audio/a8101b8c77bf5d4c7e3d.js",
       "bytes": 139860,
       "sha256": "eab90323c216132a2d6555579e46845a3122b3a4c72ba4672e0d6396829db7f4"
+    },
+    "assets/official/voices/char_1015_aglna2.mp3": {
+      "chunk": "offline/audio/507fbb069ede2b9078cf.js",
+      "bytes": 149640,
+      "sha256": "c6662abd21b7c1aaeb6b6566251cc68e3c5b533c71f211e1e8727f5ffd87fde4"
+    },
+    "assets/official/voices/char_1016_agoat2.mp3": {
+      "chunk": "offline/audio/d14e6402ca55ad811177.js",
+      "bytes": 204501,
+      "sha256": "b18e556972b014bc14961f3648e23fb6f0a699163534fd028385d08122425be9"
     },
     "assets/official/voices/char_1019_siege2.mp3": {
       "chunk": "offline/audio/ae2e9d1c9eb612419180.js",
@@ -222,6 +247,21 @@
       "chunk": "offline/audio/cd95ab5c84e714c22795.js",
       "bytes": 265641,
       "sha256": "7d0ece16f5a450bd9b718fe61186298c6909abd8d79bc2bf2a8944d4d5e173b0"
+    },
+    "assets/official/voices/char_1024_hbisc2.mp3": {
+      "chunk": "offline/audio/17191d5d870db702efcb.js",
+      "bytes": 204129,
+      "sha256": "d0e8c7448af0f26d1058ea3803f2cf00fa7bd3e0d7eb1f53d780122513363af1"
+    },
+    "assets/official/voices/char_1026_gvial2.mp3": {
+      "chunk": "offline/audio/cce867ce1cf047a9e9a7.js",
+      "bytes": 205217,
+      "sha256": "7f87c4879431284bb6db319b76ceef75ba4397b11bfcb7b429a4a84da04bf110"
+    },
+    "assets/official/voices/char_1027_greyy2.mp3": {
+      "chunk": "offline/audio/bad3fcb1d4f3c1c8552b.js",
+      "bytes": 267933,
+      "sha256": "26a2956ee3cb9bc051925c0b0119eb42bb1a8459c629da1e68606607646ba062"
     },
     "assets/official/voices/char_1028_texas2.mp3": {
       "chunk": "offline/audio/98721f7436d72371d79c.js",
@@ -283,6 +323,11 @@
       "bytes": 198042,
       "sha256": "33077acc524f13bcdffa48878cec4b10bc03f82762cb9d43e5cdb166da3e9680"
     },
+    "assets/official/voices/char_1044_hsgma2.mp3": {
+      "chunk": "offline/audio/66886754d2322630e13b.js",
+      "bytes": 212314,
+      "sha256": "6ca5a9e7a1a01cf623191ab6bdc671039762fcbf0aaa27eb304fa68a137a33e1"
+    },
     "assets/official/voices/char_1045_svash2.mp3": {
       "chunk": "offline/audio/95a590cec9def0a189f3.js",
       "bytes": 279434,
@@ -302,6 +347,11 @@
       "chunk": "offline/audio/f50b53c364ab253732c3.js",
       "bytes": 123095,
       "sha256": "d46b649c5cdcceaa497c014420274b2f3f0e8b95cd19b25a9b579f45c7217924"
+    },
+    "assets/official/voices/char_1052_kalts2.mp3": {
+      "chunk": "offline/audio/df9555858e3331b0737f.js",
+      "bytes": 27000,
+      "sha256": "4c30d30e69b5112fe38ee27598ec335710a4b6398d31bf0890d88c5edbb40a8c"
     },
     "assets/official/voices/char_109_fmout.mp3": {
       "chunk": "offline/audio/2e39448a59b35f2ba482.js",
@@ -443,6 +493,46 @@
       "bytes": 195635,
       "sha256": "50ce465e75e4a96bd1145bee13e7c2ecadafba4ee6b6c35ce202c816327e5fbb"
     },
+    "assets/official/voices/char_2014_nian.mp3": {
+      "chunk": "offline/audio/fd64516aeb6d8a7ee2ac.js",
+      "bytes": 252528,
+      "sha256": "a144475323b437e73535f9595a60cbe599e71d743ed63d1fd382349f37170fcd"
+    },
+    "assets/official/voices/char_2015_dusk.mp3": {
+      "chunk": "offline/audio/2f9fc0ff077305a46a58.js",
+      "bytes": 265576,
+      "sha256": "17292ea39a0751b8eaba70410068b511a9dcca71d205a61137585e1addd994a8"
+    },
+    "assets/official/voices/char_2023_ling.mp3": {
+      "chunk": "offline/audio/0a2eec4a29aa3d812464.js",
+      "bytes": 169844,
+      "sha256": "8643a2ca8ae1fa449d969fb43df9940de3a4d4a174cc5c5a812bb8daf43c230a"
+    },
+    "assets/official/voices/char_2024_chyue.mp3": {
+      "chunk": "offline/audio/b06ac02fe9f85c65099f.js",
+      "bytes": 182232,
+      "sha256": "bcb5677540432e9dd20683abe30985e859ae2a6d97119a7e29a20181be2c6a57"
+    },
+    "assets/official/voices/char_2025_shu.mp3": {
+      "chunk": "offline/audio/4c7b2484c8a3961ad913.js",
+      "bytes": 217023,
+      "sha256": "4c1570758f32734698fdcce03602bdbcc214939aae0a46d108d3c2579eeaf03d"
+    },
+    "assets/official/voices/char_2026_yu.mp3": {
+      "chunk": "offline/audio/e0e241d8ec9878e6b576.js",
+      "bytes": 209662,
+      "sha256": "7233fe2f956c47e2d4c42b1d4829904e60b790f84f62304bedd2764201303855"
+    },
+    "assets/official/voices/char_2027_wang.mp3": {
+      "chunk": "offline/audio/3f02383d3278329c27fc.js",
+      "bytes": 287260,
+      "sha256": "bb51e1804ce0178914891636862bd3763f8ec0a41c3eb5b285563b3e55467dd9"
+    },
+    "assets/official/voices/char_206_gnosis.mp3": {
+      "chunk": "offline/audio/0682b9960dc747ebe578.js",
+      "bytes": 195905,
+      "sha256": "3ab9195c19b0d9692439a1caa6653c6dd0a2cf24138b9316f83bdb32edf9d146"
+    },
     "assets/official/voices/char_208_melan.mp3": {
       "chunk": "offline/audio/4dae77b8ac226dde97bd.js",
       "bytes": 88294,
@@ -563,6 +653,11 @@
       "bytes": 136160,
       "sha256": "69fea77987f77376715bc7aec9e4cc0664d9324a58529b60a5304ca708c3fda1"
     },
+    "assets/official/voices/char_300_phenxi.mp3": {
+      "chunk": "offline/audio/754db535ba92123f38d2.js",
+      "bytes": 209072,
+      "sha256": "80ba042a597a0b94ccb73e4842f4e16e4261f5075df16bf0aac4479dfc98b529"
+    },
     "assets/official/voices/char_301_cutter.mp3": {
       "chunk": "offline/audio/e0cce79e6180c4043e5a.js",
       "bytes": 232832,
@@ -572,6 +667,11 @@
       "chunk": "offline/audio/aaf949ce4ac6ad30665c.js",
       "bytes": 221735,
       "sha256": "ba7d3f7488f33d3afa00efd83236e12082d6a646924a62c411b3be386a7a5004"
+    },
+    "assets/official/voices/char_322_lmlee.mp3": {
+      "chunk": "offline/audio/e5c0155b21336f6e5524.js",
+      "bytes": 240827,
+      "sha256": "cd48ec01ba91a09e45604c7290103f0c6a7eb00be7e2530a79fa5beae5ec2b0e"
     },
     "assets/official/voices/char_328_cammou.mp3": {
       "chunk": "offline/audio/18bf6f889dc7fbdbdc24.js",
@@ -598,6 +698,11 @@
       "bytes": 122193,
       "sha256": "5de04beaac5e701c97d65efab7252cb66961c13cf082a702c20b7ceda35e5b7d"
     },
+    "assets/official/voices/char_377_gdglow.mp3": {
+      "chunk": "offline/audio/6d1bca716debbba4b4ea.js",
+      "bytes": 159436,
+      "sha256": "222323f5a80ccf0eb62af2bc6a2fb788788964267e7b8df6273b8392a27fdfd5"
+    },
     "assets/official/voices/char_381_bubble.mp3": {
       "chunk": "offline/audio/004519226e5d1cb2655e.js",
       "bytes": 275225,
@@ -618,6 +723,11 @@
       "bytes": 121031,
       "sha256": "afdf41f6fb560f8ab8c1caf0e672f2e5fb1add6e78e105bd66f3bd93ff7f5d38"
     },
+    "assets/official/voices/char_4009_irene.mp3": {
+      "chunk": "offline/audio/c094f3bac0110b31edac.js",
+      "bytes": 193214,
+      "sha256": "d8e06755b62d0864bbbf9f019d8030e76ce3cd94f744e2a2ab40e7d1b1f34404"
+    },
     "assets/official/voices/char_4010_etlchi.mp3": {
       "chunk": "offline/audio/132b1469dec04346c978.js",
       "bytes": 210526,
@@ -632,6 +742,11 @@
       "chunk": "offline/audio/aa431487268d72db25bd.js",
       "bytes": 195127,
       "sha256": "92598501c430a9b494c4f54ca0e980b7c61894b7093f99cb79bcf5fad0e09eaa"
+    },
+    "assets/official/voices/char_4016_kazema.mp3": {
+      "chunk": "offline/audio/7c31b60f4f5499f616f3.js",
+      "bytes": 119335,
+      "sha256": "839866e913984451f0a35942543df89c1de30d0c67123e092ee74db9c13ad774"
     },
     "assets/official/voices/char_4026_vulpis.mp3": {
       "chunk": "offline/audio/7f8582d63061037149a5.js",
@@ -658,10 +773,30 @@
       "bytes": 154797,
       "sha256": "1d8164f9f4c3389d17f76ba9ac2185a8f7c14c6830a48a4c9d2b74f3788ff725"
     },
+    "assets/official/voices/char_4039_horn.mp3": {
+      "chunk": "offline/audio/4e33d6e626cc0912ed56.js",
+      "bytes": 200397,
+      "sha256": "9b1ec7600a61fcc98083f7c6d665824719e1b2af19a1c60b95be8798c190aa98"
+    },
+    "assets/official/voices/char_4040_rockr.mp3": {
+      "chunk": "offline/audio/de7a6179ebec38d90329.js",
+      "bytes": 179009,
+      "sha256": "e7006c1ebfe156804be45227c4f73b4a30d99cbf279adf8c78c9b183c52c1edf"
+    },
     "assets/official/voices/char_4041_chnut.mp3": {
       "chunk": "offline/audio/900c8551171ba3d614fd.js",
       "bytes": 153471,
       "sha256": "50be807089060f4c5bcf2388750108f928b418a78e7a36fad5fc9e9fb3770303"
+    },
+    "assets/official/voices/char_4046_ebnhlz.mp3": {
+      "chunk": "offline/audio/492cb62fa0b282583cf0.js",
+      "bytes": 208686,
+      "sha256": "57e8f7ce546ae42ba51328bda8b13d517b895d63d8149aacee1838fa0a27acb9"
+    },
+    "assets/official/voices/char_4048_doroth.mp3": {
+      "chunk": "offline/audio/1c6080717131bcbbcebc.js",
+      "bytes": 223720,
+      "sha256": "5a225f20e4eaaa4b3453166aff1f5c42419b8945b2852a1ff9d3c36e9b27edad"
     },
     "assets/official/voices/char_4052_surfer.mp3": {
       "chunk": "offline/audio/926198e52c3db63a6110.js",
@@ -677,6 +812,11 @@
       "chunk": "offline/audio/35d435d3e519fd0f7bd9.js",
       "bytes": 194510,
       "sha256": "557b909c573fe035f6b92d0e358bc32c83a3ec9fae8749d30ec5b1147f2edec3"
+    },
+    "assets/official/voices/char_4058_pepe.mp3": {
+      "chunk": "offline/audio/79babf74407b15e85142.js",
+      "bytes": 207909,
+      "sha256": "21acaac99937dd9a1becf97ee7049fc2f5ea4cce428aae4ca0861829c9a65758"
     },
     "assets/official/voices/char_4062_totter.mp3": {
       "chunk": "offline/audio/c7dcdd32fe17c21c99e5.js",
@@ -803,6 +943,21 @@
       "bytes": 246399,
       "sha256": "d7d2946b0aa06c2bbf4e2d5ee58e7997f281c27d40cc57c79aa72fb2e6bae292"
     },
+    "assets/official/voices/char_4141_marcil.mp3": {
+      "chunk": "offline/audio/c06adb73f753710c1793.js",
+      "bytes": 242736,
+      "sha256": "20454256f0fe1e162ec634b94867edbf9eaddb443cbb6bbd175f87f60d5debc9"
+    },
+    "assets/official/voices/char_4142_laios.mp3": {
+      "chunk": "offline/audio/3e790063f99f949cdfa6.js",
+      "bytes": 119157,
+      "sha256": "e89625cb7022e73048c2de8018ba7e11d09d83e7c33fc28a6f68b397ce2db4fd"
+    },
+    "assets/official/voices/char_4144_chilc.mp3": {
+      "chunk": "offline/audio/806f062debf029fb7cde.js",
+      "bytes": 185911,
+      "sha256": "3c6658b9d60048a77cf98aac08d9c2c81ca318dd1c6de76dbd9ee849d6f73259"
+    },
     "assets/official/voices/char_4145_ulpia.mp3": {
       "chunk": "offline/audio/63566f3f08fd1b57e74b.js",
       "bytes": 217080,
@@ -893,6 +1048,11 @@
       "bytes": 164410,
       "sha256": "b4291cebf7c7252d274c8d39f0b88b315146c5eb58089e3918e40cdf2b259fac"
     },
+    "assets/official/voices/char_420_flamtl.mp3": {
+      "chunk": "offline/audio/834456f7b1f682c7b46d.js",
+      "bytes": 228344,
+      "sha256": "76cc8e2a44c8798e814f8b2c0919ece7e4e0b3b40e98572c65416bb1a8e39510"
+    },
     "assets/official/voices/char_4211_snhunt.mp3": {
       "chunk": "offline/audio/2224b2d154d0065029cb.js",
       "bytes": 175145,
@@ -907,6 +1067,11 @@
       "chunk": "offline/audio/1df384a0ffa4a7f374fa.js",
       "bytes": 90549,
       "sha256": "d5ad48427b6fa3e8a452af907e1177620c6f241fb124c70a6a175dd56dbfa29d"
+    },
+    "assets/official/voices/char_421_crow.mp3": {
+      "chunk": "offline/audio/f56ba0405a34f9bca748.js",
+      "bytes": 215025,
+      "sha256": "e4bdd341607433540f71363f46f09587692fd2a8a2d0ff661b0bd36a3457cdd3"
     },
     "assets/official/voices/char_4222_taraxa.mp3": {
       "chunk": "offline/audio/56f6addd3b6b7caed3f6.js",
@@ -932,6 +1097,11 @@
       "chunk": "offline/audio/175929da67ff0b3d22ee.js",
       "bytes": 212540,
       "sha256": "de4f56050d5ca1d95e9c4ded3d7deae8516d797105b6f8ace650dfe0b27fc5de"
+    },
+    "assets/official/voices/char_422_aurora.mp3": {
+      "chunk": "offline/audio/a46312632905f097af00.js",
+      "bytes": 120121,
+      "sha256": "afb6965174a08a14789991e43bc37e356a5a6ec2bcb671a0ff7a0bad69549d85"
     },
     "assets/official/voices/char_4231_clemnt.mp3": {
       "chunk": "offline/audio/5ab84fb407796801152c.js",
@@ -968,6 +1138,31 @@
       "bytes": 165540,
       "sha256": "1e26d8cce213fbf1a0df28c0397f50b74db581b784bcc681ab357db1e06156a6"
     },
+    "assets/official/voices/char_426_billro.mp3": {
+      "chunk": "offline/audio/d88ce54b0d3aa0223097.js",
+      "bytes": 207858,
+      "sha256": "b8099d83666b1fae7350fc08f7f89a2658a80c073d41e7a7e29ee0a5592ba0a8"
+    },
+    "assets/official/voices/char_430_fartth.mp3": {
+      "chunk": "offline/audio/f27a74bf78a9f3f802ea.js",
+      "bytes": 129173,
+      "sha256": "d6a8125ffab7a2138dcee64616eb493163582eaea827e553fc720b44566418da"
+    },
+    "assets/official/voices/char_431_ashlok.mp3": {
+      "chunk": "offline/audio/b425a8f5a8949d901f41.js",
+      "bytes": 87406,
+      "sha256": "5054ff8fbfe2b211b9d4a95cb60b0ea3fbf1832e1dd2c60249f9a3fd58e6be0f"
+    },
+    "assets/official/voices/char_433_windft.mp3": {
+      "chunk": "offline/audio/f8413fd2eb5f99dc27ef.js",
+      "bytes": 113728,
+      "sha256": "efea88e1cf4dfff7f669281564c68ff41e48805a5f45e395477110ea9cb3f815"
+    },
+    "assets/official/voices/char_437_mizuki.mp3": {
+      "chunk": "offline/audio/9e644362f9f3821d7a2c.js",
+      "bytes": 199765,
+      "sha256": "a3273deaddd3d36352dc2f0c1a3fa329b7977f8bbf5543b60808e0c99b0739ad"
+    },
     "assets/official/voices/char_440_pinecn.mp3": {
       "chunk": "offline/audio/2811859d1d98c5d0b15e.js",
       "bytes": 158431,
@@ -1003,10 +1198,40 @@
       "bytes": 211748,
       "sha256": "894fc417e307f8622b406f2d7952a806b28a09f2d56743502edac0c6fb5e4bfb"
     },
+    "assets/official/voices/char_473_mberry.mp3": {
+      "chunk": "offline/audio/5d0651b30c486a4c2712.js",
+      "bytes": 307927,
+      "sha256": "3ca63afaa7d77b279c608e2ab82b3a147b8539fb003b9877e595e121f66e6f37"
+    },
+    "assets/official/voices/char_475_akafyu.mp3": {
+      "chunk": "offline/audio/a59cfd99895e33d1d678.js",
+      "bytes": 210306,
+      "sha256": "fbe984a572cd32db8cd18142952811bf69ff8343d2237da3be326720cfa1c4d8"
+    },
+    "assets/official/voices/char_476_blkngt.mp3": {
+      "chunk": "offline/audio/21f5508791c2d9833af1.js",
+      "bytes": 195358,
+      "sha256": "dfcf40c9a870ded07581e3b1edf6e11b6c6718d7bdd808eb9791ddd60b01b629"
+    },
+    "assets/official/voices/char_478_kirara.mp3": {
+      "chunk": "offline/audio/e2ec6ef93ab1c299ebf5.js",
+      "bytes": 129361,
+      "sha256": "41e8be61553dd6be0c7d21eb55788909b6a2a784279644bbb83d9ccf324ede90"
+    },
+    "assets/official/voices/char_479_sleach.mp3": {
+      "chunk": "offline/audio/6e61d43b78f462e5b90e.js",
+      "bytes": 80479,
+      "sha256": "dff28b25a84c3cbf11838a11702b1f430627b026a8f3b1f65beff52dfd0668b5"
+    },
     "assets/official/voices/char_484_robrta.mp3": {
       "chunk": "offline/audio/3100ca1aa8935dd209c5.js",
       "bytes": 188020,
       "sha256": "8fa1086231ab497d4f6cff118e03f97317cafafce0726e539d6a0408151c426d"
+    },
+    "assets/official/voices/char_485_pallas.mp3": {
+      "chunk": "offline/audio/6275b52d009d2d363c62.js",
+      "bytes": 224402,
+      "sha256": "1527d7e65c88c95fe51678d16f4e4ed6a6705286c57bf24202a4f09054b8f5e1"
     },
     "assets/official/voices/char_487_bobb.mp3": {
       "chunk": "offline/audio/3515c469f2aae08ac915.js",
@@ -1018,10 +1243,20 @@
       "bytes": 227747,
       "sha256": "5ce34d86c4cec50d072ab05617903f3a99be82a3d49a494ecb2a1c527bff64ae"
     },
+    "assets/official/voices/char_489_serum.mp3": {
+      "chunk": "offline/audio/4742f564c0753a40b93a.js",
+      "bytes": 188269,
+      "sha256": "19dbe145e0312b8af3b6ce7ab4e4870d1a00b54a9e3897e81b408ef25f0e46a6"
+    },
     "assets/official/voices/char_491_humus.mp3": {
       "chunk": "offline/audio/ecd7bd83aeb9f6106606.js",
       "bytes": 156040,
       "sha256": "38cd31ed541fa4233a189d543876829e4a4fae128c3d68b67da51ca2479a8bb6"
+    },
+    "assets/official/voices/char_492_quercu.mp3": {
+      "chunk": "offline/audio/a9caaa25dc199d5f8053.js",
+      "bytes": 225765,
+      "sha256": "bf82ac6c60d976d90d8606c8ee8270b207e0d2519baac07ad99c4e357e2628c3"
     },
     "assets/official/voices/char_493_firwhl.mp3": {
       "chunk": "offline/audio/cd31ee655d7a7871d18e.js",
@@ -1046,6 +1281,6 @@
   },
   "bundle": {
     "file": "app.bundle.js",
-    "sha256": "a55e0140b1ea0b5263dc34a2e2ee70f18f0c7ad3eab1471acfb40c6593afa1ad"
+    "sha256": "ad1d1f8378d1959488c8397d3a983c43fff215a2f508e6eac948e046dd9e22f9"
   }
 }

@@ -61,25 +61,43 @@
   }
 
   // dist/engine.js
-  var BANNERS = [{ id: "LIMITED_79_0_1", title: "将雪投火", en: "CINDERS OF SNOW", tag: "限定寻访 · 庆典", subtitle: "2026.11.01 — 2026.11.15", up6: ["塔露拉", "冻河"], up5: ["奥尔佳"], accent: "#d43e2a" }];
-  var reference = null;
+  var BANNERS = [
+    { id: "LIMITED_79_0_1", title: "将雪投火", en: "CINDERS OF SNOW", tag: "限定寻访 · 庆典", series: "庆典", year: 2026, subtitle: "2026.11.01 — 2026.11.15", dates: "11.01 — 11.15", endText: "结束于 11月15日 03:59", up6: ["塔露拉", "冻河"], up5: ["奥尔佳"], accent: "#d43e2a", image: "assets/banner-snowfire.webp", native: true },
+    { id: "LIMITED_70_0_1", title: "劫尽古今", en: "LIMITED HEADHUNTING", tag: "限定寻访 · 春节", series: "春节", year: 2026, subtitle: "2026.02.10 — 2026.02.24", dates: "02.10 — 02.24", endText: "结束于 2月24日 03:59", up6: ["望", "赤刃明霄陈"], up5: ["风絮"], accent: "#ef8a24", image: "assets/banner-wang.webp", ui: "assets/official/pools/limited_70_0_1/prefab.json" },
+    { id: "LIMITED_73_0_1", title: "承诺", en: "LIMITED HEADHUNTING", tag: "限定寻访 · 庆典", series: "庆典", year: 2026, subtitle: "2026.05.01 — 2026.05.15", dates: "05.01 — 05.15", endText: "结束于 5月15日 03:59", up6: ["凯尔希·思衡托", "可露希尔"], up5: ["裂响"], accent: "#b4cb34", image: "assets/banner-promise.webp", ui: "assets/official/pools/limited_73_0_1/prefab.json" },
+    { id: "LIMITED_76_0_1", title: "车辙与风的归所", en: "LIMITED HEADHUNTING", tag: "限定寻访 · 夏季", series: "夏季", year: 2026, subtitle: "2026.08.01 — 2026.08.15", dates: "08.01 — 08.15", endText: "结束于 8月15日 03:59", up6: ["予愿安洁莉娜", "珊比"], up5: ["嘉辛塔"], accent: "#33cbbd", image: "assets/banner-summer.webp", ui: "assets/official/pools/limited_76_0_1/prefab.json" },
+    { id: "LINKAGE_54_0_1", title: "泰拉饭，呜呼，泰拉饭", en: "DUNGEON MESHI", tag: "迷宫冒险干员寻访", series: "联动", year: 2024, subtitle: "2024.09.02 — 2024.09.16", dates: "09.02 — 09.16", endText: "结束于 9月16日 03:59", up6: ["玛露西尔"], up5: ["莱欧斯", "齐尔查克"], accent: "#e7b352", image: "assets/banner-dungeon.webp", ui: "assets/official/pools/linkage_54_0_1/prefab.json", linkage: true }
+  ];
+  var references = /* @__PURE__ */ new Map();
   function configurePool(data) {
-    if (data.gachaPoolId !== BANNERS[0].id) throw Error("Incorrect pool");
-    reference = data;
+    if (!BANNERS.some((b) => b.id === data?.gachaPoolId) || !data?.availCharInfo?.perAvailList || !data?.client) throw Error("Incorrect pool");
+    references.set(data.gachaPoolId, data);
+  }
+  function configurePools(data) {
+    for (const pool of Object.values(data)) configurePool(pool);
+  }
+  function getPool(id) {
+    return references.get(id);
   }
   function freshState() {
     return { version: 2, selected: BANNERS[0].id, pools: {}, collection: {}, history: [], total: 0, counts: { 3: 0, 4: 0, 5: 0, 6: 0 } };
   }
   function poolState(s, id) {
-    return s.pools[id] ??= { pity: 0, pulls: 0, firstHigh: false, guarantee5Avail: reference?.client.guarantee5Avail ?? 1, rewardClaimed: false };
+    const p = s.pools[id] ??= { pity: 0, pulls: 0, firstHigh: false, guarantee5Avail: references.get(id)?.client.guarantee5Avail ?? 1, rewardClaimed: false };
+    p.linkageTargetObtained ??= false;
+    p.linkageFirst5 ??= null;
+    p.linkagePairComplete ??= false;
+    return p;
   }
   function sixRate(pity) {
     const weight = 2 + (pity >= 50 ? (pity - 49) * 2 : 0);
     return weight / (weight + 98);
   }
   function draw(s, banner2, operators2, count, rng = Math.random, now = Date.now()) {
+    const reference = references.get(banner2?.id);
     if (!reference || ![1, 10].includes(count)) throw Error("Invalid pool or count");
-    const p = poolState(s, banner2.id), out = [], original = Math.random;
+    const linkage = reference.client.gachaRuleType === "LINKAGE", target = reference.upCharInfo.perCharList.find((t) => t.rarityRank === 5)?.charIdList[0], up5 = reference.upCharInfo.perCharList.find((t) => t.rarityRank === 4)?.charIdList ?? [];
+    const p = poolState(s, banner2.id), out = [], original = Math.random, roster = new Map(operators2.map((o) => [o.id, o]));
     try {
       Math.random = rng;
       for (let i = 0; i < count; i++) {
@@ -91,7 +109,16 @@
           const forced = U(core, reference.availCharInfo.perAvailList, tier, reference.upCharInfo);
           if (forced) result = forced;
         }
-        const op = operators2.find((o) => o.id === result.charId);
+        if (linkage) {
+          if (!p.linkageTargetObtained && core.counter >= reference.client.linkageParam.guaranteeTarget6Count) result = { charId: target, rarity: 5 };
+          if (result.rarity === 4 && p.linkageFirst5 && !p.linkagePairComplete) {
+            result = { charId: up5.find((id) => id !== p.linkageFirst5), rarity: 4 };
+            p.linkagePairComplete = true;
+          }
+          if (result.charId === target) p.linkageTargetObtained = true;
+          if (result.rarity === 4 && up5.includes(result.charId) && !p.linkageFirst5) p.linkageFirst5 = result.charId;
+        }
+        const op = roster.get(result.charId);
         if (!op) throw Error("Missing operator " + result.charId);
         const item = { ...op, isNew: !s.collection[op.id], index: s.total + 1, time: now, banner: banner2.id };
         s.collection[op.id] = (s.collection[op.id] || 0) + 1;
@@ -110,10 +137,12 @@
     s.history = s.history.slice(0, 1e3);
     return out;
   }
-  function claimReward(s, operators2) {
-    const p = poolState(s, BANNERS[0].id);
-    if (p.pulls < 300 || p.rewardClaimed) return null;
-    const op = operators2.find((o) => o.id === reference.client.limitParam.limitedCharId);
+  function claimReward(s, operators2, bannerId = s.selected) {
+    const reference = references.get(bannerId), limit = reference?.client.limitParam;
+    if (!limit?.hasFreeChar) return null;
+    const p = poolState(s, bannerId);
+    if (p.pulls < limit.freeCount || p.rewardClaimed) return null;
+    const op = operators2.find((o) => o.id === limit.limitedCharId);
     if (!op) throw Error("Missing reward");
     p.rewardClaimed = true;
     s.collection[op.id] = (s.collection[op.id] || 0) + 1;
@@ -20927,6 +20956,258 @@ void main(){float edge=smoothstep(0.,.07,vUv.x)*(1.-smoothstep(.93,1.,vUv.x));ve
     return across <= radius && Math.abs(along - progress * length) <= Math.max(radius, length * 0.1);
   }
 
+  // dist/historical-ui.js
+  var SKIP = /* @__PURE__ */ new Set(["group_entry_anim", "btn_gacha_1_free", "panel_free_char", "recruit_free_char", "use_10_tk", "use_limit_10_tk", "use_tk", "use_diamond", "use_free_tk", "group_free_cd", "multi_item", "multi_gacha_item", "diamond_shield_item", "single_item", "limit_pool_part(Clone)"]);
+  var SVG = "http://www.w3.org/2000/svg";
+  var rgba = (c) => `rgba(${c.r * 255},${c.g * 255},${c.b * 255},${c.a ?? 1})`;
+  function mountHistoricalUI(container, onOne, onTen, onDetails, layouts) {
+    const cache = /* @__PURE__ */ new Map();
+    let current = null;
+    const resize = () => {
+      if (!current) return;
+      const { stage: stage2, root } = current;
+      const scale = Math.min(container.clientWidth / root.size.x, container.clientHeight / root.size.y);
+      stage2.style.transform = `translate(-50%,-50%) scale(${scale})`;
+    };
+    new ResizeObserver(resize).observe(container);
+    function mount(banner2) {
+      const data = layouts()[banner2.id];
+      if (!data) throw Error("Missing original layout: " + banner2.id);
+      const root = data.nodes[data.root], base = banner2.ui.slice(0, banner2.ui.lastIndexOf("/") + 1);
+      const stage2 = document.createElement("div");
+      stage2.className = "original-ui-stage historical-ui-stage";
+      stage2.dataset.pool = banner2.id;
+      stage2.dataset.originalMd5 = data.source.md5;
+      stage2.style.width = root.size.x + "px";
+      stage2.style.height = root.size.y + "px";
+      const svg = document.createElementNS(SVG, "svg");
+      svg.classList.add("svg-defs");
+      svg.setAttribute("aria-hidden", "true");
+      const defs = document.createElementNS(SVG, "defs");
+      svg.append(defs);
+      stage2.append(svg);
+      const filters = /* @__PURE__ */ new Map(), elements = /* @__PURE__ */ new Map(), runtime = /* @__PURE__ */ new Map();
+      function filter(color) {
+        if (color.r === 1 && color.g === 1 && color.b === 1) return "";
+        const key2 = [color.r, color.g, color.b].join(",");
+        if (filters.has(key2)) return filters.get(key2);
+        const id = "native-" + banner2.id + "-" + filters.size, el = document.createElementNS(SVG, "filter"), matrix = document.createElementNS(SVG, "feColorMatrix");
+        el.id = id;
+        el.setAttribute("color-interpolation-filters", "sRGB");
+        matrix.setAttribute("type", "matrix");
+        matrix.setAttribute("values", `${color.r} 0 0 0 0 0 ${color.g} 0 0 0 0 0 ${color.b} 0 0 0 0 0 1 0`);
+        el.append(matrix);
+        defs.append(el);
+        const result2 = `url(#${id})`;
+        filters.set(key2, result2);
+        return result2;
+      }
+      function text(el, n, value) {
+        const span = document.createElement("span"), style = n.textStyle || { fontSize: 20, alignment: 4, color: { r: 1, g: 1, b: 1, a: 1 } };
+        span.className = "original-runtime-text native-text";
+        span.textContent = value;
+        const align = style.alignment ?? 4;
+        Object.assign(span.style, { fontSize: style.fontSize + "px", color: rgba(style.color), display: "flex", alignItems: align < 3 ? "flex-start" : align < 6 ? "center" : "flex-end", justifyContent: align % 3 === 0 ? "flex-start" : align % 3 === 1 ? "center" : "flex-end", textAlign: ["left", "center", "right"][align % 3], lineHeight: "1.1", whiteSpace: "pre", fontFamily: n.fontName?.includes("Novecento") ? "Novecento, sans-serif" : n.fontName?.includes("Bender") ? "Bender, sans-serif" : 'HeadhuntCJK, "Microsoft YaHei", sans-serif', fontWeight: n.fontName?.match(/Heavy|Bold/) ? "700" : "400" });
+        el.append(span);
+        if (!runtime.has(n.name)) runtime.set(n.name, []);
+        runtime.get(n.name).push(span);
+      }
+      function node(id, parent, pw, ph) {
+        const n = data.nodes[id];
+        if (!n || !n.active || SKIP.has(n.name)) return;
+        let w = pw * (n.anchorMax.x - n.anchorMin.x) + n.size.x, h = ph * (n.anchorMax.y - n.anchorMin.y) + n.size.y;
+        if (n.runtimeSprite) {
+          [w, h] = data.sprites[n.runtimeSprite].canvas;
+        }
+        if (n.name === "end_day_layout" && n.layout) {
+          w = n.children.reduce((sum, id2) => sum + (data.nodes[id2]?.size.x || 0), 0) + n.layout.spacing * Math.max(0, n.children.length - 1);
+        }
+        const x = pw * (n.anchorMin.x + (n.anchorMax.x - n.anchorMin.x) * n.pivot.x) + n.position.x - w * n.pivot.x;
+        const y = ph * (n.anchorMin.y + (n.anchorMax.y - n.anchorMin.y) * n.pivot.y) + n.position.y - h * n.pivot.y;
+        const el = document.createElement("div");
+        el.className = "original-ui-node historical-ui-node";
+        el.dataset.name = n.name;
+        el.dataset.node = id;
+        const q = n.rotation, angle = Math.atan2(2 * (q.w * q.z + q.x * q.y), 1 - 2 * (q.y * q.y + q.z * q.z)) * 180 / Math.PI;
+        Object.assign(el.style, { width: w + "px", height: h + "px", left: x + "px", bottom: y + "px", opacity: n.opacity ?? 1, transformOrigin: `${n.pivot.x * 100}% ${(1 - n.pivot.y) * 100}%`, transform: `rotate(${-angle}deg) scale(${n.scale.x},${n.scale.y})` });
+        if (n.rectMask || n.mask) el.style.overflow = "hidden";
+        if (n.name === "end_day_layout" && n.layout) {
+          el.style.display = "flex";
+          el.style.alignItems = "center";
+          el.style.gap = n.layout.spacing + "px";
+          el.style.width = "max-content";
+          el.style.left = x + w * n.pivot.x + "px";
+          el.style.transform = `translateX(${-n.pivot.x * 100}%) rotate(${-angle}deg) scale(${n.scale.x},${n.scale.y})`;
+        }
+        if (parent.dataset.name === "end_day_layout") {
+          el.style.position = "relative";
+          el.style.left = "auto";
+          el.style.bottom = "auto";
+          el.style.flexShrink = "0";
+          if (n.textStyle) {
+            el.style.width = "max-content";
+            el.style.height = "auto";
+          } else if (w === 0 && n.images[0]?.sprite) {
+            el.style.width = (data.sprites[n.images[0].sprite]?.canvas[0] || 1) + "px";
+          }
+        }
+        parent.append(el);
+        if (!elements.has(n.name)) elements.set(n.name, []);
+        elements.get(n.name).push(el);
+        for (const original of n.images) {
+          const im = n.runtimeSprite ? { ...original, file: data.sprites[n.runtimeSprite].file, sprite: n.runtimeSprite } : original;
+          if (n.mask && !n.showMaskGraphic) continue;
+          if (!im.file) {
+            const solid = document.createElement("span");
+            solid.className = "native-solid";
+            solid.style.background = rgba(im.color);
+            if (im.maskData) {
+              solid.style.maskImage = `url("${im.maskData}")`;
+              solid.style.maskSize = "100% 100%";
+            }
+            el.append(solid);
+            continue;
+          }
+          const image = document.createElement("img");
+          image.src = base + im.file;
+          image.alt = "";
+          image.draggable = false;
+          image.decoding = "async";
+          image.dataset.sprite = im.sprite;
+          const mat = im.materialColor || { r: 1, g: 1, b: 1, a: 1 }, color = { r: mat.r * (im.rgbControl ? 1 : im.color.r), g: mat.g * (im.rgbControl ? 1 : im.color.g), b: mat.b * (im.rgbControl ? 1 : im.color.b) };
+          image.style.opacity = im.color.a * (mat.a ?? 1);
+          image.style.objectFit = im.preserveAspect ? "contain" : "fill";
+          image.style.filter = filter(color);
+          if (im.additive) image.style.mixBlendMode = "screen";
+          el.append(image);
+        }
+        for (const source of n.texts) text(el, n, source.text);
+        if (!n.texts.length && n.textStyle && ["text_secure_3", "remain_times", "text_end_time", "text_shard_count", "text_protect_countdown"].includes(n.name)) text(el, n, "");
+        if (parent.dataset.name === "end_day_layout" && n.textStyle) el.querySelectorAll(".native-text").forEach((span) => {
+          span.style.position = "relative";
+          span.style.inset = "auto";
+        });
+        const count = ["btn_gacha_1", "btn_gacha"].includes(n.name) ? 1 : ["btn_gacha_10", "btn_10_gacha"].includes(n.name) ? 10 : 0;
+        if (count) {
+          const button = document.createElement("button");
+          button.className = "original-action historical-action";
+          button.dataset.count = count;
+          button.setAttribute("aria-label", count === 1 ? "寻访一次" : "寻访十次");
+          button.onclick = count === 1 ? onOne : onTen;
+          el.append(button);
+        }
+        if (n.name === "btn_shop" || n.name === "btn_view_detail" || n.name === "click_button (2)") {
+          const button = document.createElement("button");
+          button.className = "original-inspect";
+          button.setAttribute("aria-label", "查看" + banner2.title + "寻访详情");
+          button.onclick = onDetails;
+          el.append(button);
+        }
+        if (n.name === "btn_view_char_01" || n.name === "btn_view_char_02") {
+          const names = banner2.id === "LIMITED_73_0_1" ? [...banner2.up6].reverse() : banner2.up6, name = names[n.name.endsWith("01") ? 0 : 1];
+          const button = document.createElement("button");
+          button.className = "original-inspect";
+          button.setAttribute("aria-label", "查看" + name);
+          button.onclick = () => document.dispatchEvent(new CustomEvent("inspect-operator", { detail: name }));
+          el.append(button);
+        }
+        for (const child of n.children) node(child, el, w, h);
+      }
+      for (const child of root.children) node(child, stage2, root.size.x, root.size.y);
+      const setText = (name, value) => runtime.get(name)?.forEach((el) => el.textContent = value);
+      setText("text_shop", "查看详情");
+      setText("shop_title_back", "寻访数据契约");
+      const end = banner2.endText.match(/(\d+)月(\d+)日\s+(\d+:\d+)/);
+      if (end) {
+        setText("text_end_month", end[1].padStart(2, "0"));
+        setText("text_end_day", end[2].padStart(2, "0"));
+        setText("text_end_time", end[3]);
+      }
+      const result = { stage: stage2, root, elements, runtime, setText };
+      cache.set(banner2.id, result);
+      return result;
+    }
+    return (banner2, operators2, p, rate, ready) => {
+      if (current?.stage.dataset.pool !== banner2.id) {
+        current = cache.get(banner2.id) || mount(banner2);
+        container.replaceChildren(current.stage);
+        container.dataset.pool = banner2.id;
+        container.setAttribute("aria-label", banner2.title + "原版寻访界面");
+      }
+      current.elements.get("group_protect_gacha")?.forEach((el) => el.style.visibility = p.firstHigh ? "hidden" : "visible");
+      current.setText("text_protect_countdown", Math.max(0, 10 - p.pulls));
+      current.setText("text_shard_count", p.pulls);
+      if (banner2.linkage) {
+        const visible = (name, show) => current.elements.get(name)?.forEach((el) => el.style.visibility = show ? "visible" : "hidden");
+        visible("protect_part", !p.firstHigh);
+        current.setText("remain_times", Math.max(0, 10 - p.pulls));
+        visible("secure_3", !p.linkageTargetObtained);
+        current.setText("text_secure_3", Math.max(0, 120 - p.pulls));
+        visible("secure_1", !p.linkagePairComplete && p.linkageFirst5 === "char_4144_chilc");
+        visible("secure_2", !p.linkagePairComplete && p.linkageFirst5 === "char_4142_laios");
+      }
+      current.stage.querySelectorAll(".historical-action").forEach((el) => el.disabled = !ready);
+      resize();
+    };
+  }
+
+  // dist/pool-selector.js
+  function mountPoolSelector(sidebar, banners, onSelect) {
+    const list = document.createElement("nav");
+    list.className = "pool-list";
+    list.setAttribute("aria-label", "选择寻访卡池");
+    for (const [index, b] of banners.entries()) {
+      if (index === 0 || b.linkage) {
+        const label = document.createElement("div");
+        label.className = "pool-group-label";
+        label.textContent = b.linkage ? "联动寻访 / 2024" : "限定寻访 / 2026";
+        list.append(label);
+      }
+      const button = document.createElement("button");
+      button.className = "pool-option";
+      button.dataset.pool = b.id;
+      button.style.setProperty("--pool-accent", b.accent);
+      button.setAttribute("aria-label", b.title + "，" + b.tag);
+      button.setAttribute("aria-pressed", "false");
+      const image = document.createElement("img");
+      image.src = b.image;
+      image.alt = "";
+      image.draggable = false;
+      const copy = document.createElement("span");
+      copy.className = "pool-option-copy";
+      const title = document.createElement("strong");
+      title.textContent = b.title;
+      const meta = document.createElement("span");
+      meta.innerHTML = `<span>${b.year} / ${b.dates}</span><b>${b.series}</b>`;
+      copy.append(title, meta);
+      button.append(image, copy);
+      button.onclick = () => onSelect(b.id);
+      list.append(button);
+    }
+    list.addEventListener("keydown", (event) => {
+      if (!["ArrowDown", "ArrowUp", "ArrowLeft", "ArrowRight", "Home", "End"].includes(event.key)) return;
+      const options = [...list.querySelectorAll("button")], index = options.indexOf(document.activeElement);
+      if (index < 0) return;
+      event.preventDefault();
+      const next = event.key === "Home" ? 0 : event.key === "End" ? options.length - 1 : (index + (["ArrowDown", "ArrowRight"].includes(event.key) ? 1 : -1) + options.length) % options.length;
+      options[next].focus();
+    });
+    sidebar.append(list);
+    let currentId = null, currentBusy = true;
+    return (id, busy2 = false) => {
+      for (const button of list.querySelectorAll("button")) {
+        const active = button.dataset.pool === id;
+        button.classList.toggle("selected", active);
+        button.setAttribute("aria-pressed", String(active));
+        button.disabled = busy2;
+      }
+      const shouldScroll = currentId !== id || currentBusy && !busy2;
+      currentId = id;
+      currentBusy = busy2;
+      if (shouldScroll) requestAnimationFrame(() => list.querySelector(".selected")?.scrollIntoView({ block: "nearest", inline: "nearest", behavior: "instant" }));
+    };
+  }
+
   // dist/app.js
   var originalBag = new OfficialBag(document.querySelector("#original-bag"));
   var presentationReady = false;
@@ -20967,6 +21248,10 @@ void main(){float edge=smoothstep(0.,.07,vUv.x)*(1.-smoothstep(.93,1.,vUv.x));ve
   var returnFocus = null;
   var inspection = false;
   var opening = false;
+  state.selected = banner.id;
+  var updateSelector;
+  var updatePoolScene;
+  var nativeLayouts = {};
   var sound = new SoundSystem(prefs, (active) => {
     document.body.classList.toggle("sound-on", active);
     $("#audio-toggle").setAttribute("aria-label", active ? "关闭音乐与音效" : "启用音乐与音效");
@@ -21020,15 +21305,15 @@ void main(){float edge=smoothstep(0.,.07,vUv.x)*(1.-smoothstep(.93,1.,vUv.x));ve
     return operators.find((o) => o.name === name);
   }
   function updateHome() {
-    $("#banner-tabs").innerHTML = BANNERS.map((b, i) => `<button class="banner-tab ${b.id === banner.id ? "active" : ""}" data-banner="${b.id}" aria-pressed="${b.id === banner.id}"><span class="tab-number">0${i + 1}</span>${b.title}<span class="tab-chip">${i === 0 ? "LIMITED" : "CUSTOM"}</span></button>`).join("");
+    const reference = getPool(banner.id), poolOperators = reference ? reference.availCharInfo.perAvailList.flatMap((t) => t.charIdList) : [];
     $("#banner-title").textContent = banner.title;
     $("#banner-english").textContent = banner.en;
     $("#banner-type").textContent = banner.tag;
     $("#banner-description").textContent = banner.subtitle;
-    $("#banner-index").textContent = `0${BANNERS.indexOf(banner) + 1} — 01`;
+    $("#banner-index").textContent = `0${BANNERS.indexOf(banner) + 1} — 0${BANNERS.length}`;
     $(".banner-series").textContent = `SPECIAL / 0${BANNERS.indexOf(banner) + 1}`;
     $("#hero").style.setProperty("--accent", banner.accent);
-    $("#featured-list").innerHTML = banner.up6.map((name, i) => `<div class="featured-op"><span class="featured-star">★</span><span>${name}</span>${i === 0 && banner.id === "LIMITED_79_0_1" ? '<span class="op-tag">限定</span>' : ""}<span class="op-up">RATE UP ↑</span></div>`).join("");
+    $("#featured-list").innerHTML = banner.up6.map((name, i) => `<div class="featured-op"><span class="featured-star">★</span><span>${name}</span>${i === 0 ? '<span class="op-tag">限定</span>' : ""}<span class="op-up">RATE UP ↑</span></div>`).join("");
     setImage($("#main-art"), find(banner.up6[0]));
     setImage($("#secondary-art"), find(banner.up6[1]));
     const p = poolState(state, banner.id);
@@ -21046,18 +21331,31 @@ void main(){float edge=smoothstep(0.,.07,vUv.x)*(1.-smoothstep(.93,1.,vUv.x));ve
     $("#draw-one").disabled = !operators.length || busy || !presentationReady;
     $("#draw-ten").disabled = !operators.length || busy || !presentationReady;
     $$(".original-action").forEach((b) => b.disabled = !operators.length || busy || !presentationReady);
-    const label = $(".hero-bottom>span:first-child");
-    label.innerHTML = banner.id === "LIMITED_79_0_1" ? '<i class="red-dot"></i>将雪投火 · 限定寻访 <b> / </b> ' + operators.length + " 名干员" : '<i class="red-dot"></i>自定义主题寻访 <b> / </b> 非官方卡池';
+    const ready = !!operators.length && !busy && presentationReady;
+    updateSelector?.(banner.id, !presentationReady || busy);
+    $("#game-ui").hidden = !banner.native;
+    $("#pool-ui").hidden = !!banner.native;
+    $("#game-ui").setAttribute("aria-label", banner.native ? banner.title + "官方卡池界面" : "将雪投火官方卡池界面");
+    if (!banner.native) updatePoolScene?.(banner, operators, p, sixRate(p.pity), ready);
+    $("#pool-pulls").textContent = p.pulls;
+    $("#pool-six-rate").textContent = (sixRate(p.pity) * 100).toFixed(2) + "%";
+    $("#pool-current-title").textContent = banner.title;
+    $("#pool-progress-note").textContent = banner.linkage ? p.linkageTargetObtained ? "玛露西尔 · 首次保底已达成" : `玛露西尔保底剩余 ${Math.max(0, 120 - p.pulls)} 次` : p.rewardClaimed ? "本期 300 次赠送已领取" : `额外赠送 ${Math.min(p.pulls, 300)} / 300`;
+    $(".pool-menu").style.setProperty("--pool-accent", banner.accent);
+    document.title = banner.title + " · 明日方舟寻访模拟";
+    $(".hero-bottom>span:first-child").textContent = banner.title + " · " + poolOperators.length + " 名干员";
+    $("footer a").href = "https://prts.wiki/w/寻访模拟/" + encodeURIComponent(banner.title);
   }
-  $("#banner-tabs").addEventListener("click", (e) => {
-    const tab = e.target.closest("[data-banner]");
-    if (!tab || busy) return;
-    banner = BANNERS.find((b) => b.id === tab.dataset.banner);
-    state.selected = banner.id;
+  function selectBanner(id) {
+    if (busy || !presentationReady || id === banner.id) return;
+    const next = BANNERS.find((b) => b.id === id);
+    if (!next) return;
+    banner = next;
+    state.selected = id;
     persist();
     sound.click();
     updateHome();
-  });
+  }
   function setPage(page) {
     if (busy) return;
     currentPage = page;
@@ -21501,15 +21799,17 @@ void main(){float edge=smoothstep(0.,.07,vUv.x)*(1.-smoothstep(.93,1.,vUv.x));ve
     };
   };
   $("#details-button").onclick = () => {
-    const p = poolState(state, banner.id);
-    openModal("将雪投火 · 寻访详情", "PRTS / LIMITED_79_0_1", `<table class="probability-table"><thead><tr><th>星级</th><th>基础权重</th><th>概率提升</th></tr></thead><tbody><tr><td>★★★★★★</td><td>2</td><td>塔露拉 / 冻河 · 各 35 权重</td></tr><tr><td>★★★★★</td><td>8</td><td>奥尔佳 · 50% </td></tr><tr><td>★★★★</td><td>50</td><td>—</td></tr><tr><td>★★★</td><td>40</td><td>—</td></tr></tbody></table><div class="rule-copy"><p>完整名单 ${operators.length} 名。凛御银灰、新约能天使、荒芜拉普兰德按 PRTS 数据应用五倍权重。</p><p><strong>本模拟沿用 PRTS 当前代码：</strong>连续 50 次未出六星后增加六星权重，再整体归一化；因此该实现没有“第 99 抽必出”的硬保底。首九抽未获得五星以上时，第十抽按其代码替换为五星。它与官方公告的标称概率存在差异。</p><p>当前六星实际抽样概率 ${(sixRate(p.pity) * 100).toFixed(2)}%。历史卡池已替换，新池进度独立保存，旧版浏览器存档未删除。</p><p><strong>300 次额外赠送：</strong>已寻访 ${p.pulls} / 300 次。额外领取塔露拉不重置六星计数、不增加寻访次数。${p.rewardClaimed ? "已领取。" : ""}</p><button class="primary-button" id="claim-reward" ${p.pulls < 300 || p.rewardClaimed ? "disabled" : ""}>${p.rewardClaimed ? "已领取塔露拉" : "领取额外赠送 · 塔露拉"}</button><p>本版未实现寻访数据契约交换所。<a href="https://prts.wiki/w/将雪投火" target="_blank" rel="noopener">PRTS 资料 ↗</a></p></div>`);
-    $("#claim-reward").onclick = () => {
-      const op = claimReward(state, operators);
+    const p = poolState(state, banner.id), reference = getPool(banner.id), roster = reference.availCharInfo.perAvailList.flatMap((t) => t.charIdList), weighted = (reference.weightUpCharInfoList || []).map((v) => operators.find((o) => o.id === v.charId)?.name).filter(Boolean), limit = reference.client.limitParam, reward = operators.find((o) => o.id === limit?.limitedCharId);
+    const rewardHTML = reward ? `<p><strong>${limit.freeCount} 次额外赠送：</strong>已寻访 ${p.pulls} / ${limit.freeCount} 次。领取 ${reward.name} 不重置六星计数、不增加寻访次数，每池仅一次。</p><button class="primary-button" id="claim-reward" ${p.pulls < limit.freeCount || p.rewardClaimed ? "disabled" : ""}>${p.rewardClaimed ? "已领取 " + reward.name : "领取额外赠送 · " + reward.name}</button>` : `<p><strong>联动六星保底：</strong>前 120 次必得玛露西尔，仅限一次；提前抽到即达成。${p.linkageTargetObtained ? "本期已达成。" : `还剩 ${Math.max(0, 120 - p.pulls)} 次。`}</p><p><strong>联动五星保护：</strong>首次获得莱欧斯或齐尔查克后，下一位五星必为另一人，仅限一次。${p.linkagePairComplete ? "已达成。" : p.linkageFirst5 ? "等待另一位五星。" : "尚未触发。"}</p>`;
+    openModal(banner.title + " · 寻访详情", "PRTS / " + banner.id, `<table class="probability-table"><thead><tr><th>星级</th><th>基础权重</th><th>概率提升</th></tr></thead><tbody><tr><td>★★★★★★</td><td>2</td><td>${banner.up6.join(" / ")} · 各 ${banner.linkage ? 50 : 35} 权重</td></tr><tr><td>★★★★★</td><td>8</td><td>${banner.up5.join(" / ")} · 合计 50%</td></tr><tr><td>★★★★</td><td>50</td><td>—</td></tr><tr><td>★★★</td><td>40</td><td>—</td></tr></tbody></table><div class="rule-copy"><p>${banner.tag} · 原始开放时间 ${banner.subtitle}。本池 ${roster.length} 名干员，按当期名单模拟。${weighted.length ? weighted.join("、") + " 应用五倍权重。" : ""}</p>${rewardHTML}<p>各池保底、首次十抽和赠送领取独立保存，收集与历史记录共用。</p><details class="sampling-note"><summary>模拟算法与完整干员名单</summary><p>沿用本项目已有 PRTS 权重抽样：连续 50 次未出六星后增加六星权重，再整体归一化，因此没有第 99 抽必出的硬保底。首九抽未获得五星以上时，第十抽替换为五星。当前实际六星抽样概率 ${(sixRate(p.pity) * 100).toFixed(2)}%。${banner.linkage ? "迷宫饭另按本期原始规则实现一次性 120 抽保底和五星双 UP 保护。" : ""}</p><p>${roster.map((id) => operators.find((o) => o.id === id)?.name).join("、")}</p></details><p>本版未实现寻访数据契约交换所。<a href="https://prts.wiki/w/寻访模拟/${encodeURIComponent(banner.title)}" target="_blank" rel="noopener">PRTS 资料 ↗</a></p></div>`);
+    const claim = $("#claim-reward");
+    if (claim) claim.onclick = () => {
+      const op = claimReward(state, operators, banner.id);
       if (op) {
         persist();
         updateHome();
         $("#modal").close();
-        toast("已领取额外赠送：塔露拉");
+        toast("已领取额外赠送：" + op.name);
       }
     };
   };
@@ -21529,7 +21829,7 @@ void main(){float edge=smoothstep(0.,.07,vUv.x)*(1.-smoothstep(.93,1.,vUv.x));ve
     if (collection) {
       $("#library-content").innerHTML = `<div class="archive-grid">${entries.map((o) => `<button class="archive-card" data-operator="${o.id}" style="--rarity:${COLORS[o.rarity]}"><img src="${o.art || "assets/rhodes.svg"}" alt="${o.name}" loading="lazy"><div class="archive-info"><span>${"★".repeat(o.rarity)}</span><strong>${o.name}</strong><small><span>${CLASS[o.profession]}</span><span>获得 ×${state.collection[o.id]}</span></small></div></button>`).join("")}</div>`;
     } else {
-      $("#library-content").innerHTML = `<table class="history-table"><thead><tr><th>序号</th><th>干员</th><th>稀有度</th><th>寻访卡池</th><th>时间</th></tr></thead><tbody>${entries.map((o) => `<tr class="${o.rarity === 6 ? "six-star" : ""}" style="--rarity:${COLORS[o.rarity]}"><td>${String(o.index).padStart(3, "0")}</td><td>${o.name}${o.isNew ? '<span class="history-new">NEW</span>' : ""}</td><td class="history-stars">${"★".repeat(o.rarity)}</td><td>${BANNERS.find((b) => b.id === o.banner)?.title || "未知"}</td><td>${new Date(o.time).toLocaleString("zh-CN", { month: "2-digit", day: "2-digit", hour: "2-digit", minute: "2-digit" })}</td></tr>`).join("")}</tbody></table>`;
+      $("#library-content").innerHTML = `<table class="history-table"><thead><tr><th>序号</th><th>干员</th><th>稀有度</th><th>寻访卡池</th><th>时间</th></tr></thead><tbody>${entries.map((o) => `<tr class="${o.rarity === 6 ? "six-star" : ""}" style="--rarity:${COLORS[o.rarity]}"><td>${String(o.index).padStart(3, "0")}</td><td>${o.name}${o.isNew ? '<span class="history-new">NEW</span>' : ""}<small class="history-pool">${BANNERS.find((b) => b.id === o.banner)?.title || "未知"}</small></td><td class="history-stars">${"★".repeat(o.rarity)}</td><td>${BANNERS.find((b) => b.id === o.banner)?.title || "未知"}</td><td>${new Date(o.time).toLocaleString("zh-CN", { month: "2-digit", day: "2-digit", hour: "2-digit", minute: "2-digit" })}</td></tr>`).join("")}</tbody></table>`;
     }
   }
   $("#filter-tabs").onclick = (e) => {
@@ -21633,9 +21933,22 @@ void main(){float edge=smoothstep(0.,.07,vUv.x)*(1.-smoothstep(.93,1.,vUv.x));ve
     $(".official-home-mark").onclick = () => setPage("home");
     const sidebar = document.createElement("aside");
     sidebar.className = "pool-menu";
-    sidebar.innerHTML = '<div class="pool-category">限定寻访</div><div class="pool-selected"><img src="assets/banner-snowfire.webp" alt="将雪投火卡池"><strong>将雪投火</strong><span>11.01 — 11.15</span></div><p>模拟寻访 · 无需消耗资源</p>';
-    sidebar.append($("#details-button"));
+    sidebar.setAttribute("aria-label", "寻访卡池");
+    sidebar.innerHTML = '<div class="pool-category">干员寻访 <span>05</span><small>HEADHUNTING</small></div>';
+    updateSelector = mountPoolSelector(sidebar, BANNERS, selectBanner);
+    updateSelector(banner.id, true);
+    const status = document.createElement("div");
+    status.className = "pool-status";
+    status.setAttribute("aria-live", "polite");
+    status.innerHTML = '<strong id="pool-current-title"></strong><div>本期寻访 <b id="pool-pulls">0</b><span>次</span></div><div>六星概率 <b id="pool-six-rate">2.00%</b></div><p id="pool-progress-note"></p><small>本地模拟 · 无需消耗资源</small>';
+    status.append($("#details-button"));
+    sidebar.append(status);
     $("#home-page").prepend(sidebar);
+    const poolUI = document.createElement("div");
+    poolUI.id = "pool-ui";
+    poolUI.hidden = true;
+    $("#home-page").append(poolUI);
+    updatePoolScene = mountHistoricalUI(poolUI, () => $("#draw-one").click(), () => $("#draw-ten").click(), () => $("#details-button").click(), () => nativeLayouts);
     $("#bag-stage").append($("#zipper-track"));
     $("#zipper-pull").innerHTML = '<span class="drag-chevron" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="m14 6-10 10 10 10m14-20L18 16l10 10"/></svg></span>';
   }
@@ -21652,8 +21965,9 @@ void main(){float edge=smoothstep(0.,.07,vUv.x)*(1.-smoothstep(.93,1.,vUv.x));ve
     $("#draw-one").disabled = true;
     $("#draw-ten").disabled = true;
     try {
-      const [data, pool, voiceData, revealData] = await Promise.all([readJSON("operators.json"), readJSON("pool.json"), readJSON("voices.json"), readJSON("reveal-assets.json")]);
-      configurePool(pool);
+      const [data, pools, voiceData, revealData, layouts] = await Promise.all([readJSON("operators.json"), readJSON("pools.json"), readJSON("voices.json"), readJSON("reveal-assets.json"), Promise.all(BANNERS.filter((b) => b.ui).map(async (b) => [b.id, await readJSON(b.ui)]))]);
+      nativeLayouts = Object.fromEntries(layouts);
+      configurePools(pools);
       operators = data;
       voices = voiceData;
       revealAssets = revealData;

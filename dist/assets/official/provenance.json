@@ -37,6 +37,21 @@
       }
     }
   },
+  "results": {
+    "portraits": "https://github.com/ArknightsAssets/ArknightsAssets2/tree/cn/assets/dyn/arts/charportraits",
+    "professions": "https://github.com/ArknightsAssets/ArknightsAssets2/tree/cn/assets/dyn/arts/ui/%5Buc%5Dcharcommon/dynprofession",
+    "portraitCount": 215,
+    "professionCount": 8,
+    "conversion": "Original 180x360 client portraits and original profession symbols, losslessly cached. Browser layout and light columns follow in-game screenshots; they are not the Unity result shader.",
+    "effects": {
+      "url": "https://ak.hycdn.cn/assetbundle/official/Android/assets/26-10-29-15-36-11-33649006/ui_recruit_states_recruit_ten_result_state.dat",
+      "md5": "8954e8df64c9a6e202fb707d9d705f45",
+      "bundle": "ui/recruit/states/recruit_ten_result_state.ab",
+      "conversion": "Original source pixels losslessly encoded; optional alpha crops remove only wholly transparent atlas margins. Colored rarity textures retain original RGB and alpha. No generated light artwork.",
+      "md5Scope": "Unpacked ui/recruit/states/recruit_ten_result_state.ab",
+      "archiveMd5": "be971a18d10c71fd6a503949785e6453"
+    }
+  },
   "audio": {
     "mirror": "https://github.com/ArknightsAssets/ArknightsAssets2/tree/voice/assets/dyn/audio/sound_beta_2",
     "routing": "https://raw.githubusercontent.com/yuanyan3060/ArknightsGameResource/main/gamedata/excel/audio_data.json",
@@ -209,23 +224,1083 @@
       "file": "assets/official/sfx/mixed_gacha_star_6.mp3",
       "duration": 1.792336,
       "sha256": "be12707b0cb2f3e5d053b3d4c01527aaf8124ead9cc9615299e418ac0e3ba3f9"
+    },
+    {
+      "file": "assets/official/voices/char_003_kalts.mp3",
+      "duration": 12.661791,
+      "sha256": "aa032c1914d2879db3857eee3b9408e5fc2a05467c7719e83da21e4a7dd0e9b0"
+    },
+    {
+      "file": "assets/official/voices/char_1012_skadi2.mp3",
+      "duration": 27.668957,
+      "sha256": "16d647016827f3494faf75974d1c52e89465c9ddfec34265d13434166ea02de3"
+    },
+    {
+      "file": "assets/official/voices/char_1013_chen2.mp3",
+      "duration": 20.130635,
+      "sha256": "44b734b98b44f58f7d53810af78344921428822294fe2057e93a82d33238a3e6"
+    },
+    {
+      "file": "assets/official/voices/char_1014_nearl2.mp3",
+      "duration": 11.49,
+      "sha256": "eab90323c216132a2d6555579e46845a3122b3a4c72ba4672e0d6396829db7f4"
+    },
+    {
+      "file": "assets/official/voices/char_1015_aglna2.mp3",
+      "duration": 13.830249,
+      "sha256": "c6662abd21b7c1aaeb6b6566251cc68e3c5b533c71f211e1e8727f5ffd87fde4"
+    },
+    {
+      "file": "assets/official/voices/char_1016_agoat2.mp3",
+      "duration": 18.123878,
+      "sha256": "b18e556972b014bc14961f3648e23fb6f0a699163534fd028385d08122425be9"
+    },
+    {
+      "file": "assets/official/voices/char_1019_siege2.mp3",
+      "duration": 22.602925,
+      "sha256": "2210875be2d8af6e667769e18c6fcc19c32b7978ec5e993152803eafefa306aa"
+    },
+    {
+      "file": "assets/official/voices/char_1020_reed2.mp3",
+      "duration": 13.19,
+      "sha256": "4e5fafd1ef1b70b891fb0ff5c64d5baa38a9bc13d06e829ddf7957b771f14a1d"
+    },
+    {
+      "file": "assets/official/voices/char_1022_flwr2.mp3",
+      "duration": 19.36,
+      "sha256": "85f83b56c97dc8e47b956fe8e0870c85d5ebe2ab2683f35f33b19c35b5d648aa"
+    },
+    {
+      "file": "assets/official/voices/char_1023_ghost2.mp3",
+      "duration": 23.704989,
+      "sha256": "7d0ece16f5a450bd9b718fe61186298c6909abd8d79bc2bf2a8944d4d5e173b0"
+    },
+    {
+      "file": "assets/official/voices/char_1024_hbisc2.mp3",
+      "duration": 19.844989,
+      "sha256": "d0e8c7448af0f26d1058ea3803f2cf00fa7bd3e0d7eb1f53d780122513363af1"
+    },
+    {
+      "file": "assets/official/voices/char_1026_gvial2.mp3",
+      "duration": 18.55,
+      "sha256": "7f87c4879431284bb6db319b76ceef75ba4397b11bfcb7b429a4a84da04bf110"
+    },
+    {
+      "file": "assets/official/voices/char_1027_greyy2.mp3",
+      "duration": 25.254989,
+      "sha256": "26a2956ee3cb9bc051925c0b0119eb42bb1a8459c629da1e68606607646ba062"
+    },
+    {
+      "file": "assets/official/voices/char_1028_texas2.mp3",
+      "duration": 20.694989,
+      "sha256": "c58421d3a09a3a8549984a189a0703ffe419aa2426035451c7c2b1533276b6ec"
+    },
+    {
+      "file": "assets/official/voices/char_1032_excu2.mp3",
+      "duration": 18.05,
+      "sha256": "c24bcd6ba83099b2e6504717dcbff881c4d0682842087687cf28a331ace90a8c"
+    },
+    {
+      "file": "assets/official/voices/char_1033_swire2.mp3",
+      "duration": 19.679592,
+      "sha256": "747968009a4f11cf085d7f4be69712ff1a48fe9bbe83fe8f845a3923930027a1"
+    },
+    {
+      "file": "assets/official/voices/char_1034_jesca2.mp3",
+      "duration": 16.524989,
+      "sha256": "cc8eeefcbf6124ee77bec919c3f1e15e20781aaa3e023f09c5ca9eb696976605"
+    },
+    {
+      "file": "assets/official/voices/char_1035_wisdel.mp3",
+      "duration": 23.185034,
+      "sha256": "79bd5c5bb27b9de6ca98c0c82cc05682dc0afd73ece209492f9d316534811339"
+    },
+    {
+      "file": "assets/official/voices/char_1036_fang2.mp3",
+      "duration": 9.921383,
+      "sha256": "1eda1e959ce5f188cda85254108a77dfb38b28374df88772d0beb7c61eb1ad38"
+    },
+    {
+      "file": "assets/official/voices/char_1038_whitw2.mp3",
+      "duration": 15.678481,
+      "sha256": "d09f0ba604d467a9e26a30dba7698b50a436abe2f7c6c8144b854084a6f71d54"
+    },
+    {
+      "file": "assets/official/voices/char_1039_thorn2.mp3",
+      "duration": 17.109864,
+      "sha256": "e94ee15eff137e4d1094c2c2dbd0b8e33cf29164de6616185a2989289e559774"
+    },
+    {
+      "file": "assets/official/voices/char_1040_blaze2.mp3",
+      "duration": 18.373379,
+      "sha256": "4cf0ac60d844b8c91a0a51b9421ff9c369a469e6069ddcb06aeb4a0705420f3c"
+    },
+    {
+      "file": "assets/official/voices/char_1041_angel2.mp3",
+      "duration": 9.350385,
+      "sha256": "80912e5a8090d373795553a43888b1e7fc64068845166d4ec60970b893e318c5"
+    },
+    {
+      "file": "assets/official/voices/char_1042_phatm2.mp3",
+      "duration": 24.530045,
+      "sha256": "fcf62c86c324e2109c0ead30330a8e8b5b492a15f47dee6c455abf043e7c2bbf"
+    },
+    {
+      "file": "assets/official/voices/char_1043_leizi2.mp3",
+      "duration": 18.517982,
+      "sha256": "33077acc524f13bcdffa48878cec4b10bc03f82762cb9d43e5cdb166da3e9680"
+    },
+    {
+      "file": "assets/official/voices/char_1044_hsgma2.mp3",
+      "duration": 19.34,
+      "sha256": "6ca5a9e7a1a01cf623191ab6bdc671039762fcbf0aaa27eb304fa68a137a33e1"
+    },
+    {
+      "file": "assets/official/voices/char_1045_svash2.mp3",
+      "duration": 27.185782,
+      "sha256": "7d7e0552356fa496e860b4d0209320b882ec71fd0031a25b55928d376ffdc107"
+    },
+    {
+      "file": "assets/official/voices/char_1046_sbell2.mp3",
+      "duration": 20.8,
+      "sha256": "484f34731a141ed1101d64ded3108a21a26660686a7dd8dcaa4091d30f9d6807"
+    },
+    {
+      "file": "assets/official/voices/char_1050_chen3.mp3",
+      "duration": 14.113084,
+      "sha256": "05360154b45f6dd67592ca8860b7a056805a9f0f0b7f8538ce363db41df2e7ca"
+    },
+    {
+      "file": "assets/official/voices/char_1051_headb2.mp3",
+      "duration": 11.62,
+      "sha256": "d46b649c5cdcceaa497c014420274b2f3f0e8b95cd19b25a9b579f45c7217924"
+    },
+    {
+      "file": "assets/official/voices/char_1052_kalts2.mp3",
+      "duration": 2.97,
+      "sha256": "4c30d30e69b5112fe38ee27598ec335710a4b6398d31bf0890d88c5edbb40a8c"
+    },
+    {
+      "file": "assets/official/voices/char_109_fmout.mp3",
+      "duration": 6.942426,
+      "sha256": "218f5085f4325cda81508d59bd9c7d24bd88d7717a5199a131897676fb735e6c"
+    },
+    {
+      "file": "assets/official/voices/char_110_deepcl.mp3",
+      "duration": 7.878367,
+      "sha256": "ed1452c58b34c77e6e785245b8bf34ca29b670136e107ddb1279016a651e0b18"
+    },
+    {
+      "file": "assets/official/voices/char_113_cqbw.mp3",
+      "duration": 23.280726,
+      "sha256": "a6be421ec6b2f7240bd7600fc9021bb477031e184db23d2173e678b666549829"
+    },
+    {
+      "file": "assets/official/voices/char_117_myrrh.mp3",
+      "duration": 20.725646,
+      "sha256": "1373af403d4345965711e8e15c0a5a2db26a5de7eea306947e10588449e5d3e5"
+    },
+    {
+      "file": "assets/official/voices/char_118_yuki.mp3",
+      "duration": 8.83102,
+      "sha256": "2dc46deccd7bbe7503fd8cd7787384e02702891699ccc5895fda7cfdd9522ce2"
+    },
+    {
+      "file": "assets/official/voices/char_120_hibisc.mp3",
+      "duration": 11.592426,
+      "sha256": "e29252e795edcb8a366c54a680d5ffdb7803142c3558cb33eb8d9a396233b5e9"
+    },
+    {
+      "file": "assets/official/voices/char_121_lava.mp3",
+      "duration": 14.451088,
+      "sha256": "4240f586bd072d1b78fdf6d08749882582f2c203f78850eb3105bde99ab1fda4"
+    },
+    {
+      "file": "assets/official/voices/char_122_beagle.mp3",
+      "duration": 9.363651,
+      "sha256": "0c770ab9c404347b72f0b552c97c9d321e3a5b27d22ad432dc5935efa6efe749"
+    },
+    {
+      "file": "assets/official/voices/char_123_fang.mp3",
+      "duration": 10.613787,
+      "sha256": "d625bc79b37543a1517ee2d4d617346484c04e5186955f89580ef9ab97ed1c2a"
+    },
+    {
+      "file": "assets/official/voices/char_124_kroos.mp3",
+      "duration": 9.467415,
+      "sha256": "38bb8cc286f3a6dfd3e61a8e3461b49c08eb25b7fcf601023f5ec6d55031a244"
+    },
+    {
+      "file": "assets/official/voices/char_126_shotst.mp3",
+      "duration": 7.315351,
+      "sha256": "adc6ecd6dfdfc2d35d32d742dbeb0cd2015d9e564d489b2b84a56582fa0c4624"
+    },
+    {
+      "file": "assets/official/voices/char_130_doberm.mp3",
+      "duration": 12.416984,
+      "sha256": "56098d35a667635d9673b06767b3019c8b3629146ca85de87d375c97c25cf76d"
+    },
+    {
+      "file": "assets/official/voices/char_133_mm.mp3",
+      "duration": 15.10873,
+      "sha256": "ec1151e1231f3ce45db02be6c237fe345bc10e54b625691fc839d2973bf46ea5"
+    },
+    {
+      "file": "assets/official/voices/char_137_brownb.mp3",
+      "duration": 7.533764,
+      "sha256": "f77049c9f350d6cfed17b8bfcf71cdb63fc008d5983780d6a122de7ecb7b8f5f"
+    },
+    {
+      "file": "assets/official/voices/char_141_nights.mp3",
+      "duration": 9.865397,
+      "sha256": "c166e9d21f9fcae18f003f9f3fe2ab931766679603d85d7cddabec58037d21de"
+    },
+    {
+      "file": "assets/official/voices/char_149_scave.mp3",
+      "duration": 10.107914,
+      "sha256": "bd994544b759df70f9e90984c1805bd844931971a66e3fde5a13f99aece559f4"
+    },
+    {
+      "file": "assets/official/voices/char_150_snakek.mp3",
+      "duration": 5.23619,
+      "sha256": "d18ff55e98e8c03c91437a707ef9b226ba16e28a9d4219ea258606889ca9bc90"
+    },
+    {
+      "file": "assets/official/voices/char_151_myrtle.mp3",
+      "duration": 17.855351,
+      "sha256": "2f7c1afef8b8ac62371f2eee086ee148e846eaceb51d92a602141ddf0d9e8559"
+    },
+    {
+      "file": "assets/official/voices/char_181_flower.mp3",
+      "duration": 10.070431,
+      "sha256": "bf0b4ab780bf8f305ed5e5a83c9ef04238d186d33b6e56647f374451e516e5b5"
+    },
+    {
+      "file": "assets/official/voices/char_183_skgoat.mp3",
+      "duration": 12.138231,
+      "sha256": "12c4c60a34c35f741e9fedd4076c1f1325b227ecfcf810315b0537ad6e17ba18"
+    },
+    {
+      "file": "assets/official/voices/char_185_frncat.mp3",
+      "duration": 13.226939,
+      "sha256": "c07cc02bcf26f5857334971fbd10f5295dd7182fc798acd53400f2e9b73f9c06"
+    },
+    {
+      "file": "assets/official/voices/char_190_clour.mp3",
+      "duration": 6.171542,
+      "sha256": "315895f7090fe52f001d0bfb6d21c34b5fc1a3849bb3126902d3da1be8ccd43e"
+    },
+    {
+      "file": "assets/official/voices/char_192_falco.mp3",
+      "duration": 11.765238,
+      "sha256": "0de7576dfce3a9f4cb6201e2dc0a2a9700581c13d5bd801e2c69d681998cfeed"
+    },
+    {
+      "file": "assets/official/voices/char_193_frostl.mp3",
+      "duration": 9.523379,
+      "sha256": "b007900bb1b8149b8a3febbefe83d2a776c1dbe312b73d69a442b70f36b7735b"
+    },
+    {
+      "file": "assets/official/voices/char_194_leto.mp3",
+      "duration": 17.156054,
+      "sha256": "fd8dfbf0c5f1aa2098bf845431796090d3fb41540ce007735808b2783ef17fac"
+    },
+    {
+      "file": "assets/official/voices/char_196_sunbr.mp3",
+      "duration": 16.379977,
+      "sha256": "1fe3dd6a296fdd7a7b9c814956c0555af602651bf48f5e18018e58cbbe65dfba"
+    },
+    {
+      "file": "assets/official/voices/char_199_yak.mp3",
+      "duration": 10.840476,
+      "sha256": "fc05255f6c0392f6f639da511a59ffc3a63700ae08adb4b86023fbb94fce2cfa"
+    },
+    {
+      "file": "assets/official/voices/char_2012_typhon.mp3",
+      "duration": 19.880249,
+      "sha256": "50ce465e75e4a96bd1145bee13e7c2ecadafba4ee6b6c35ce202c816327e5fbb"
+    },
+    {
+      "file": "assets/official/voices/char_2014_nian.mp3",
+      "duration": 19.822608,
+      "sha256": "a144475323b437e73535f9595a60cbe599e71d743ed63d1fd382349f37170fcd"
+    },
+    {
+      "file": "assets/official/voices/char_2015_dusk.mp3",
+      "duration": 22.265714,
+      "sha256": "17292ea39a0751b8eaba70410068b511a9dcca71d205a61137585e1addd994a8"
+    },
+    {
+      "file": "assets/official/voices/char_2023_ling.mp3",
+      "duration": 16.82,
+      "sha256": "8643a2ca8ae1fa449d969fb43df9940de3a4d4a174cc5c5a812bb8daf43c230a"
+    },
+    {
+      "file": "assets/official/voices/char_2024_chyue.mp3",
+      "duration": 17.234989,
+      "sha256": "bcb5677540432e9dd20683abe30985e859ae2a6d97119a7e29a20181be2c6a57"
+    },
+    {
+      "file": "assets/official/voices/char_2025_shu.mp3",
+      "duration": 22.009388,
+      "sha256": "4c1570758f32734698fdcce03602bdbcc214939aae0a46d108d3c2579eeaf03d"
+    },
+    {
+      "file": "assets/official/voices/char_2026_yu.mp3",
+      "duration": 21.009683,
+      "sha256": "7233fe2f956c47e2d4c42b1d4829904e60b790f84f62304bedd2764201303855"
+    },
+    {
+      "file": "assets/official/voices/char_2027_wang.mp3",
+      "duration": 24.226281,
+      "sha256": "bb51e1804ce0178914891636862bd3763f8ec0a41c3eb5b285563b3e55467dd9"
+    },
+    {
+      "file": "assets/official/voices/char_206_gnosis.mp3",
+      "duration": 14.234989,
+      "sha256": "3ab9195c19b0d9692439a1caa6653c6dd0a2cf24138b9316f83bdb32edf9d146"
+    },
+    {
+      "file": "assets/official/voices/char_208_melan.mp3",
+      "duration": 9.985669,
+      "sha256": "b16632a7ecc41f4b03cab4e8b6c86d360e1906cdadd9a29f2871cbd9213d282b"
+    },
+    {
+      "file": "assets/official/voices/char_209_ardign.mp3",
+      "duration": 12.525465,
+      "sha256": "9e066446eabdabd61345e8576a867ea8a79c4a60287d96c12f32a9746214e688"
+    },
+    {
+      "file": "assets/official/voices/char_210_stward.mp3",
+      "duration": 7.047007,
+      "sha256": "e11cc4fa31d77cbfda5d2f59c3f79e9d94bd58ccd0829d82805bbe993e5ca737"
+    },
+    {
+      "file": "assets/official/voices/char_212_ansel.mp3",
+      "duration": 6.674263,
+      "sha256": "2d80d8c9cc1f5abb4ca2eeff51d93ab16f08e031b7a43f953e568aed755c6808"
+    },
+    {
+      "file": "assets/official/voices/char_235_jesica.mp3",
+      "duration": 16.644014,
+      "sha256": "67f4ad8bdbe698eb99b88d8abff8bd87345f309e968be78c7da3466d91f5b38a"
+    },
+    {
+      "file": "assets/official/voices/char_236_rope.mp3",
+      "duration": 19.440227,
+      "sha256": "f6568f3b3962f13c85ed8744f339f653a8101e67d7f9b88fecc6eb76fa8afb73"
+    },
+    {
+      "file": "assets/official/voices/char_237_gravel.mp3",
+      "duration": 22.334286,
+      "sha256": "4c6695b57c602dee607b70945d25c1ea3c7e7fbe07131f343543ef4d74402b7a"
+    },
+    {
+      "file": "assets/official/voices/char_240_wyvern.mp3",
+      "duration": 8.473764,
+      "sha256": "b06b05074c10d0640d0fdd57dd90f51f8a7b3ed56b0fa93d00aa528c94e261ed"
+    },
+    {
+      "file": "assets/official/voices/char_245_cello.mp3",
+      "duration": 18.219025,
+      "sha256": "adba1466da96f6a9ca0f4596dc6fe408039f2a929d4805787fdac166114535b6"
+    },
+    {
+      "file": "assets/official/voices/char_249_mlyss.mp3",
+      "duration": 14.52,
+      "sha256": "2db7b7afcf613766f7a861d931fccd76760bdcb91353dc195a9716666b9393fe"
+    },
+    {
+      "file": "assets/official/voices/char_253_greyy.mp3",
+      "duration": 14.292063,
+      "sha256": "bc0e24d1dbe3c485ab949380787a417b611f6ce3798f97c2326addfc594855e8"
+    },
+    {
+      "file": "assets/official/voices/char_258_podego.mp3",
+      "duration": 7.641361,
+      "sha256": "89e0990b928144b6b11cc271a74462d2fedb5f084867a4996c5ccc3f27afe854"
+    },
+    {
+      "file": "assets/official/voices/char_271_spikes.mp3",
+      "duration": 15.734671,
+      "sha256": "2d1b97292d312663cefbffca1280c74e58c53f7de2860b2a183af90c898a3bba"
+    },
+    {
+      "file": "assets/official/voices/char_272_strong.mp3",
+      "duration": 19.856168,
+      "sha256": "353df43fb7071700fd8e183ae89b1dc2c9a2a36045c361926ed690275b421372"
+    },
+    {
+      "file": "assets/official/voices/char_277_sqrrel.mp3",
+      "duration": 4.05068,
+      "sha256": "c1317b1266994e8521f823cfd28843268ff917a3211ed320f487464f5105f308"
+    },
+    {
+      "file": "assets/official/voices/char_278_orchid.mp3",
+      "duration": 10.836417,
+      "sha256": "1ed7305c0e2cb3c7414ee70de46f69dd0ae1526929dbfa9b968449f34c1e02ca"
+    },
+    {
+      "file": "assets/official/voices/char_281_popka.mp3",
+      "duration": 17.217029,
+      "sha256": "b930736596e561fec502912c7f2521861d271e9e61b613ec2141b02e6d5f16ab"
+    },
+    {
+      "file": "assets/official/voices/char_282_catap.mp3",
+      "duration": 18.875964,
+      "sha256": "9f6495eceff8d2a7e187604b4137501cc1dea6d3f3afd104cd9767a7cd90fe83"
+    },
+    {
+      "file": "assets/official/voices/char_283_midn.mp3",
+      "duration": 19.63576,
+      "sha256": "e41e2afc665978779e79465f1f67d9c0447bb9cb48cee6748d2d7bacd5450212"
+    },
+    {
+      "file": "assets/official/voices/char_284_spot.mp3",
+      "duration": 12.32102,
+      "sha256": "44f49b51d9aab92a02cbbdd108bd7ff58e945cc5d40575bf7ab11d8b23f3da8a"
+    },
+    {
+      "file": "assets/official/voices/char_289_gyuki.mp3",
+      "duration": 8.829297,
+      "sha256": "3d753f239f53c3b63c0addeda652071c7d5752ce706b511f24bdb2b7cd152606"
+    },
+    {
+      "file": "assets/official/voices/char_290_vigna.mp3",
+      "duration": 15.908526,
+      "sha256": "96d9faf1b8250f0ce66f0ea9741e9d1d00469b2a04cf0b8746d8e87e76945fbb"
+    },
+    {
+      "file": "assets/official/voices/char_297_hamoni.mp3",
+      "duration": 22.35,
+      "sha256": "66565e1e5344258ef14d3ca82b295d7960c81da62e916144b0bd853f229d490a"
+    },
+    {
+      "file": "assets/official/voices/char_298_susuro.mp3",
+      "duration": 12.001542,
+      "sha256": "69fea77987f77376715bc7aec9e4cc0664d9324a58529b60a5304ca708c3fda1"
+    },
+    {
+      "file": "assets/official/voices/char_300_phenxi.mp3",
+      "duration": 19.64,
+      "sha256": "80ba042a597a0b94ccb73e4842f4e16e4261f5075df16bf0aac4479dfc98b529"
+    },
+    {
+      "file": "assets/official/voices/char_301_cutter.mp3",
+      "duration": 18.619433,
+      "sha256": "8056a14424911d3a32644080f8f1161ccc0ff9a135f1ff9a69775b5af6f5fae9"
+    },
+    {
+      "file": "assets/official/voices/char_302_glaze.mp3",
+      "duration": 16.584195,
+      "sha256": "ba7d3f7488f33d3afa00efd83236e12082d6a646924a62c411b3be386a7a5004"
+    },
+    {
+      "file": "assets/official/voices/char_322_lmlee.mp3",
+      "duration": 18.81,
+      "sha256": "cd48ec01ba91a09e45604c7290103f0c6a7eb00be7e2530a79fa5beae5ec2b0e"
+    },
+    {
+      "file": "assets/official/voices/char_328_cammou.mp3",
+      "duration": 12.16415,
+      "sha256": "2613b502364f5b2aa9e46ff26fd774cb22ab7c2268bc2c115f4ab6c867970715"
+    },
+    {
+      "file": "assets/official/voices/char_337_utage.mp3",
+      "duration": 17.017211,
+      "sha256": "f8d4ebf9d86bf29a8145a50ad35363377e28a561f5389d7677f2882f0f01615a"
+    },
+    {
+      "file": "assets/official/voices/char_341_sntlla.mp3",
+      "duration": 34.254989,
+      "sha256": "e5626fa6f76f260226a85d45230847e9566448f80396e1b027a52f760b593be3"
+    },
+    {
+      "file": "assets/official/voices/char_347_jaksel.mp3",
+      "duration": 9.321497,
+      "sha256": "f1206fa8361ea20b964cec874482a240cdf21cae3480504a484b2417f7e173a1"
+    },
+    {
+      "file": "assets/official/voices/char_366_acdrop.mp3",
+      "duration": 9.702971,
+      "sha256": "5de04beaac5e701c97d65efab7252cb66961c13cf082a702c20b7ceda35e5b7d"
+    },
+    {
+      "file": "assets/official/voices/char_377_gdglow.mp3",
+      "duration": 12.96,
+      "sha256": "222323f5a80ccf0eb62af2bc6a2fb788788964267e7b8df6273b8392a27fdfd5"
+    },
+    {
+      "file": "assets/official/voices/char_381_bubble.mp3",
+      "duration": 21.19034,
+      "sha256": "f036e9d6c8f241e2da9e8b220fbc2316f62381b79dd68d74288f1d5a9384ff62"
+    },
+    {
+      "file": "assets/official/voices/char_391_rosmon.mp3",
+      "duration": 33.03585,
+      "sha256": "783975ea23256a90b9d708a6aea1bc902a92a9bad662333b35ac428c5e510825"
+    },
+    {
+      "file": "assets/official/voices/char_393_toledo.mp3",
+      "duration": 23.280385,
+      "sha256": "f5675149cc1b47662e511ea400ca89bde7d1270a1ca958a23541319da426b16b"
+    },
+    {
+      "file": "assets/official/voices/char_4006_melnte.mp3",
+      "duration": 11.31,
+      "sha256": "afdf41f6fb560f8ab8c1caf0e672f2e5fb1add6e78e105bd66f3bd93ff7f5d38"
+    },
+    {
+      "file": "assets/official/voices/char_4009_irene.mp3",
+      "duration": 17.664989,
+      "sha256": "d8e06755b62d0864bbbf9f019d8030e76ce3cd94f744e2a2ab40e7d1b1f34404"
+    },
+    {
+      "file": "assets/official/voices/char_4010_etlchi.mp3",
+      "duration": 18.818209,
+      "sha256": "51ee438074fd2a009f7ee5e06c3b6b250ffaa7ef294437032cfc9884d9381041"
+    },
+    {
+      "file": "assets/official/voices/char_4014_lunacu.mp3",
+      "duration": 17.464989,
+      "sha256": "0add6acbea33aecc367a0baff862283278c2cccb1c5cd8c672228cc203d92718"
+    },
+    {
+      "file": "assets/official/voices/char_4015_spuria.mp3",
+      "duration": 17.344989,
+      "sha256": "92598501c430a9b494c4f54ca0e980b7c61894b7093f99cb79bcf5fad0e09eaa"
+    },
+    {
+      "file": "assets/official/voices/char_4016_kazema.mp3",
+      "duration": 10.043787,
+      "sha256": "839866e913984451f0a35942543df89c1de30d0c67123e092ee74db9c13ad774"
+    },
+    {
+      "file": "assets/official/voices/char_4026_vulpis.mp3",
+      "duration": 18.604308,
+      "sha256": "02b14ff9db0870933689d377a5701bb3774a0e7540073cdd07c3f6e38e8b6cf6"
+    },
+    {
+      "file": "assets/official/voices/char_4027_heyak.mp3",
+      "duration": 21.974989,
+      "sha256": "4ab1f82274fc2ecc6c685e2d9ef0cfcaa56d305821d6f359315a0b9357913246"
+    },
+    {
+      "file": "assets/official/voices/char_4031_liesel.mp3",
+      "duration": 19.72,
+      "sha256": "2d0ac7552a141173b01995b8981e791dac48fb9fc56e79119dc01c5bfb1dec21"
+    },
+    {
+      "file": "assets/official/voices/char_4032_provs.mp3",
+      "duration": 19.824989,
+      "sha256": "860c4fbbf1bb552e9a763e651180aa415fc6819fed672aba35cda9478b442aff"
+    },
+    {
+      "file": "assets/official/voices/char_4037_demetr.mp3",
+      "duration": 15.211066,
+      "sha256": "1d8164f9f4c3389d17f76ba9ac2185a8f7c14c6830a48a4c9d2b74f3788ff725"
+    },
+    {
+      "file": "assets/official/voices/char_4039_horn.mp3",
+      "duration": 18.544989,
+      "sha256": "9b1ec7600a61fcc98083f7c6d665824719e1b2af19a1c60b95be8798c190aa98"
+    },
+    {
+      "file": "assets/official/voices/char_4040_rockr.mp3",
+      "duration": 15.364989,
+      "sha256": "e7006c1ebfe156804be45227c4f73b4a30d99cbf279adf8c78c9b183c52c1edf"
+    },
+    {
+      "file": "assets/official/voices/char_4041_chnut.mp3",
+      "duration": 13.854989,
+      "sha256": "50be807089060f4c5bcf2388750108f928b418a78e7a36fad5fc9e9fb3770303"
+    },
+    {
+      "file": "assets/official/voices/char_4046_ebnhlz.mp3",
+      "duration": 18.29,
+      "sha256": "57e8f7ce546ae42ba51328bda8b13d517b895d63d8149aacee1838fa0a27acb9"
+    },
+    {
+      "file": "assets/official/voices/char_4048_doroth.mp3",
+      "duration": 20.05,
+      "sha256": "5a225f20e4eaaa4b3453166aff1f5c42419b8945b2852a1ff9d3c36e9b27edad"
+    },
+    {
+      "file": "assets/official/voices/char_4052_surfer.mp3",
+      "duration": 19.34,
+      "sha256": "0f9a7ce114c7b66138d627d5b6db16f3a99a6846e6fd791483c9a007797abbeb"
+    },
+    {
+      "file": "assets/official/voices/char_4055_bgsnow.mp3",
+      "duration": 17.724989,
+      "sha256": "18f06a60499737a3a4ee6336d8031518405cffb9becc239c6de49e0a6935bfe0"
+    },
+    {
+      "file": "assets/official/voices/char_4056_titi.mp3",
+      "duration": 16.251406,
+      "sha256": "557b909c573fe035f6b92d0e358bc32c83a3ec9fae8749d30ec5b1147f2edec3"
+    },
+    {
+      "file": "assets/official/voices/char_4058_pepe.mp3",
+      "duration": 17.259542,
+      "sha256": "21acaac99937dd9a1becf97ee7049fc2f5ea4cce428aae4ca0861829c9a65758"
+    },
+    {
+      "file": "assets/official/voices/char_4062_totter.mp3",
+      "duration": 12.58,
+      "sha256": "216849ce67060c78a1bdcfada518b32c8331ac5e017ba4eaa1964110e8f09c12"
+    },
+    {
+      "file": "assets/official/voices/char_4064_mlynar.mp3",
+      "duration": 18.85,
+      "sha256": "e34455e0efd9b6115d80b56cf51c22b1eba5cc76fc5cc99432bd4d351af19880"
+    },
+    {
+      "file": "assets/official/voices/char_4065_judge.mp3",
+      "duration": 16.69,
+      "sha256": "9262d65ce3e59b57c620600de26afdb66821330b104c1d0e43446f30c1822c7d"
+    },
+    {
+      "file": "assets/official/voices/char_4071_peper.mp3",
+      "duration": 14.044989,
+      "sha256": "b68280de6a9c7cab69885fff924d17d29a948ed2c46d5b93a1238c96e929bd7f"
+    },
+    {
+      "file": "assets/official/voices/char_4072_ironmn.mp3",
+      "duration": 19.99,
+      "sha256": "3399e32dbb5288916d1ebdfa366b578e63bb1b3e8f4f30aa5c6b4cab7ac348ee"
+    },
+    {
+      "file": "assets/official/voices/char_4079_haini.mp3",
+      "duration": 18.285714,
+      "sha256": "d2132d740402d78ae325e16ce096fa777ca1fb9036c3d062bb6e32a2ef0256b6"
+    },
+    {
+      "file": "assets/official/voices/char_4080_lin.mp3",
+      "duration": 16.734989,
+      "sha256": "ba8c869b98d73c34afe586a6479bf247663a7d156322cab7f2b1c161173bae5b"
+    },
+    {
+      "file": "assets/official/voices/char_4081_warmy.mp3",
+      "duration": 20.500068,
+      "sha256": "d30f2dd18eb931a0c9da71f37016c0b31d707b8c82946734d47244c979e8ac06"
+    },
+    {
+      "file": "assets/official/voices/char_4082_qiubai.mp3",
+      "duration": 15.88,
+      "sha256": "ee82458afd135234294a56b355e85d58c85734cb1098df23bc1387ed0a437800"
+    },
+    {
+      "file": "assets/official/voices/char_4083_chimes.mp3",
+      "duration": 17.56,
+      "sha256": "c3b0bcfbd8476d6bdc47c4d698cf8a38624947cc82b692578a9d4334589fac49"
+    },
+    {
+      "file": "assets/official/voices/char_4087_ines.mp3",
+      "duration": 16.27,
+      "sha256": "59579ada8465d1395c8a528d26efbb978da4a06251bf5bcbb570a98d2939c23d"
+    },
+    {
+      "file": "assets/official/voices/char_4088_hodrer.mp3",
+      "duration": 9.792517,
+      "sha256": "5ddd1e26bff321064d6a5bf7298a9f293b79490f5115100eb78c7d6c6a95ee1c"
+    },
+    {
+      "file": "assets/official/voices/char_4098_vvana.mp3",
+      "duration": 25.565782,
+      "sha256": "0bd89fab1bff1ac2e3c732937b154d2ca576f955eefde1b8271374e11312c8ae"
+    },
+    {
+      "file": "assets/official/voices/char_4105_almond.mp3",
+      "duration": 18.35,
+      "sha256": "e9a1de7622b87ea33401f2360e4c63e0f11d50b84d8006a183dc72e74278bbd6"
+    },
+    {
+      "file": "assets/official/voices/char_4107_vrdant.mp3",
+      "duration": 19.89,
+      "sha256": "bc4ef6f90ed24cd87adf3bace3033a4266a0200d8df952b3b382dd2740a0027b"
+    },
+    {
+      "file": "assets/official/voices/char_4109_baslin.mp3",
+      "duration": 17.758866,
+      "sha256": "6a5ff81d6f2e5edf90ee63908a10e9f574cab123955136cf1609b2ca478dd478"
+    },
+    {
+      "file": "assets/official/voices/char_4116_blkkgt.mp3",
+      "duration": 15.023333,
+      "sha256": "2b3b27b5a3997cd5cc12b5e32ed5919ce545d0580c11b7081aa789e3ee20c019"
+    },
+    {
+      "file": "assets/official/voices/char_4117_ray.mp3",
+      "duration": 17.75873,
+      "sha256": "3b75567b1ac78d5192e81bcf6a3ce8032e50b81c11c169400b9fce946f261cdb"
+    },
+    {
+      "file": "assets/official/voices/char_4121_zuole.mp3",
+      "duration": 22.832562,
+      "sha256": "8901ce1f635cd21196782d3557fc99bf1e03e42467d24000db295ba5d342cb5b"
+    },
+    {
+      "file": "assets/official/voices/char_4122_grabds.mp3",
+      "duration": 14.265397,
+      "sha256": "74367d0e9aa2e1d1ac687bb1bf7b7afbd2ca8b16c5d086925a3d6b57194d13f6"
+    },
+    {
+      "file": "assets/official/voices/char_4130_luton.mp3",
+      "duration": 10.578322,
+      "sha256": "274929248bad36a7ac66ca5a6cc82a98c2f6a06baa99dd47a1be11d9844e22d2"
+    },
+    {
+      "file": "assets/official/voices/char_4132_ascln.mp3",
+      "duration": 14.266757,
+      "sha256": "12f2bf0b584933a6a7d692ab04d280fece4d75c8a91900bc25d99909abe95d51"
+    },
+    {
+      "file": "assets/official/voices/char_4133_logos.mp3",
+      "duration": 17.113469,
+      "sha256": "1799627c0dd0530f6bd3004b3c2827e4b26ef92faf87ea8eaa6687964a50147a"
+    },
+    {
+      "file": "assets/official/voices/char_4138_narant.mp3",
+      "duration": 18.339025,
+      "sha256": "35c473ea45aa8c2e0eead42b0cb807e260145eac59660452d775cf0aa5372bf7"
+    },
+    {
+      "file": "assets/official/voices/char_4140_lasher.mp3",
+      "duration": 21.632812,
+      "sha256": "d7d2946b0aa06c2bbf4e2d5ee58e7997f281c27d40cc57c79aa72fb2e6bae292"
+    },
+    {
+      "file": "assets/official/voices/char_4141_marcil.mp3",
+      "duration": 19.770998,
+      "sha256": "20454256f0fe1e162ec634b94867edbf9eaddb443cbb6bbd175f87f60d5debc9"
+    },
+    {
+      "file": "assets/official/voices/char_4142_laios.mp3",
+      "duration": 10.51619,
+      "sha256": "e89625cb7022e73048c2de8018ba7e11d09d83e7c33fc28a6f68b397ce2db4fd"
+    },
+    {
+      "file": "assets/official/voices/char_4144_chilc.mp3",
+      "duration": 18.209841,
+      "sha256": "3c6658b9d60048a77cf98aac08d9c2c81ca318dd1c6de76dbd9ee849d6f73259"
+    },
+    {
+      "file": "assets/official/voices/char_4145_ulpia.mp3",
+      "duration": 21.855714,
+      "sha256": "20c3d3489658b596e13373d87ae88cc198c2140e08ea3f0fcab11e85cbd4c150"
+    },
+    {
+      "file": "assets/official/voices/char_4146_nymph.mp3",
+      "duration": 16.397868,
+      "sha256": "5b30a5f8801e96efc43866406126693b115855e5c5ad7c2e0953a07ba1e93488"
+    },
+    {
+      "file": "assets/official/voices/char_4147_mitm.mp3",
+      "duration": 16.704671,
+      "sha256": "0786e2263a2a759d2755ad36c7171d2e83e0f9db9313c9498133dcd3035d6b4e"
+    },
+    {
+      "file": "assets/official/voices/char_4155_talr.mp3",
+      "duration": 17.635238,
+      "sha256": "157e577a3f55e653adabb67e67faba4854c5cac4df71419d5ef1d5f338c7d327"
+    },
+    {
+      "file": "assets/official/voices/char_4164_tecno.mp3",
+      "duration": 24.6,
+      "sha256": "cf5c350536412c812c8f33254fa750693f7e9602c6470bd0a1f42b6263d73885"
+    },
+    {
+      "file": "assets/official/voices/char_4171_wulfen.mp3",
+      "duration": 16.779274,
+      "sha256": "73e435eb28b899d34cc8a62c1a7327094401dc051817cd82e272864fdb97e966"
+    },
+    {
+      "file": "assets/official/voices/char_4173_nowell.mp3",
+      "duration": 13.445193,
+      "sha256": "6cd855236805f23ede17ae820bc920a77ff92da9edb3a9b7682c952519dc68d6"
+    },
+    {
+      "file": "assets/official/voices/char_4178_alanna.mp3",
+      "duration": 19.36,
+      "sha256": "48bd2747c811b03688e6831752d4628bf3941bee8a6021ac447e777751d4aafc"
+    },
+    {
+      "file": "assets/official/voices/char_4179_monstr.mp3",
+      "duration": 23.793968,
+      "sha256": "8395a7ff7e3d8467eb5739b9a23b33ebe5f8ea0083eb4649ea5dd9f199fbcdd8"
+    },
+    {
+      "file": "assets/official/voices/char_4187_graceb.mp3",
+      "duration": 15.72,
+      "sha256": "340550674ad6f61ddf68625db2eea319a55542be392fb4e3aafbc705f851aebe"
+    },
+    {
+      "file": "assets/official/voices/char_4191_tippi.mp3",
+      "duration": 14.52,
+      "sha256": "ff5efc61b6211538a7692baa65f3d922d197d9f622f72b97321156326b180346"
+    },
+    {
+      "file": "assets/official/voices/char_4193_lemuen.mp3",
+      "duration": 20.530227,
+      "sha256": "a0fbc0d244b38b3b97c09125c82ca2bb0d219f18d0d0a529a6b9da355d85385c"
+    },
+    {
+      "file": "assets/official/voices/char_4196_reckpr.mp3",
+      "duration": 18.12,
+      "sha256": "dfab33237e8bead8af930f971d83f04d64f1003b6a9e53d287f8f1f3a1beb29f"
+    },
+    {
+      "file": "assets/official/voices/char_4202_haruka.mp3",
+      "duration": 19.95,
+      "sha256": "06366328cb93a93d1390fc9dd7e659385b9a23e048f3623bf681786de2c07b5a"
+    },
+    {
+      "file": "assets/official/voices/char_4203_kichi.mp3",
+      "duration": 18.36,
+      "sha256": "9692bb54b0c4e776d5771b7359e1e242aa0a72b8e700f3eb3333ec92109ec751"
+    },
+    {
+      "file": "assets/official/voices/char_4204_mantra.mp3",
+      "duration": 23.14,
+      "sha256": "74e693f40f839d5e357a99c9d593465d57c01f73e1b32d170ab51437f394ff75"
+    },
+    {
+      "file": "assets/official/voices/char_4207_branch.mp3",
+      "duration": 19.48,
+      "sha256": "d748b439f8a5924418fef7c1ce552d147a8f6132628055ed7a1325e180bd62a9"
+    },
+    {
+      "file": "assets/official/voices/char_4208_wintim.mp3",
+      "duration": 17.05,
+      "sha256": "b4291cebf7c7252d274c8d39f0b88b315146c5eb58089e3918e40cdf2b259fac"
+    },
+    {
+      "file": "assets/official/voices/char_420_flamtl.mp3",
+      "duration": 18.51,
+      "sha256": "76cc8e2a44c8798e814f8b2c0919ece7e4e0b3b40e98572c65416bb1a8e39510"
+    },
+    {
+      "file": "assets/official/voices/char_4211_snhunt.mp3",
+      "duration": 16.16,
+      "sha256": "a41e7f376816a3847c457d9e61985655fce6724cbec185bbf3355a169d6ec33f"
+    },
+    {
+      "file": "assets/official/voices/char_4212_nasti.mp3",
+      "duration": 10.192834,
+      "sha256": "a596e626a4fd921cf7251f52e2e22d7f2bbd13e209e5dc9271b3034082dbe163"
+    },
+    {
+      "file": "assets/official/voices/char_4214_cairn.mp3",
+      "duration": 7.16,
+      "sha256": "d5ad48427b6fa3e8a452af907e1177620c6f241fb124c70a6a175dd56dbfa29d"
+    },
+    {
+      "file": "assets/official/voices/char_421_crow.mp3",
+      "duration": 22.907052,
+      "sha256": "e4bdd341607433540f71363f46f09587692fd2a8a2d0ff661b0bd36a3457cdd3"
+    },
+    {
+      "file": "assets/official/voices/char_4222_taraxa.mp3",
+      "duration": 20.8,
+      "sha256": "cc2688572bdd2f6c0ffa8760ceb709e1940d441b07f2a43968e6442eddfb46d1"
+    },
+    {
+      "file": "assets/official/voices/char_4224_turdus.mp3",
+      "duration": 25.72,
+      "sha256": "0a76dc78c5778d8887ec1842cfe8d3dba6c22d496e76cac3fc4ec9998246268f"
+    },
+    {
+      "file": "assets/official/voices/char_4225_tanya.mp3",
+      "duration": 20.080023,
+      "sha256": "3334bd33d53b79c4d93fc082be9ad837341bb319978e01e9ff124eb31bd59558"
+    },
+    {
+      "file": "assets/official/voices/char_4228_closur.mp3",
+      "duration": 12.380522,
+      "sha256": "664611d3757e10bec6855944e403f2c5d454fe47b6bb1a0e2b9f473855c2cdcb"
+    },
+    {
+      "file": "assets/official/voices/char_4229_aphris.mp3",
+      "duration": 19.320408,
+      "sha256": "de4f56050d5ca1d95e9c4ded3d7deae8516d797105b6f8ace650dfe0b27fc5de"
+    },
+    {
+      "file": "assets/official/voices/char_422_aurora.mp3",
+      "duration": 12.39,
+      "sha256": "afb6965174a08a14789991e43bc37e356a5a6ec2bcb671a0ff7a0bad69549d85"
+    },
+    {
+      "file": "assets/official/voices/char_4231_clemnt.mp3",
+      "duration": 27.300726,
+      "sha256": "1e0ffebe7cd491c5d39f77c5d0c909e78aaf220e030724a06f62990a44aa43a9"
+    },
+    {
+      "file": "assets/official/voices/char_4234_pedro.mp3",
+      "duration": 12.78,
+      "sha256": "9f428376772b24d4e59050d7cab9fb46839ebc6f4c49219099b2f52cd10fb756"
+    },
+    {
+      "file": "assets/official/voices/char_4235_thumpy.mp3",
+      "duration": 18.56,
+      "sha256": "fc55b9c02fff1dd10b2058795f2f4a93e4956403b98109e3865e6548453198fb"
+    },
+    {
+      "file": "assets/official/voices/char_4237_jcinta.mp3",
+      "duration": 17.066259,
+      "sha256": "2f989c571b9bb165b939966a044eafe60735f9fe61b311853106d50d982458a3"
+    },
+    {
+      "file": "assets/official/voices/char_4244_tocka.mp3",
+      "duration": 21.2,
+      "sha256": "4e9f57bf58cedb3bae49bbc7942ae2141033b6cd2325ecf73319bcb5fc872aca"
+    },
+    {
+      "file": "assets/official/voices/char_4245_alga.mp3",
+      "duration": 13.080567,
+      "sha256": "4028d0a92c71805eb0b8eaf9dd96f6d86a799371c397a02ff989a354243a6db7"
+    },
+    {
+      "file": "assets/official/voices/char_4247_oxi.mp3",
+      "duration": 16.86,
+      "sha256": "1e26d8cce213fbf1a0df28c0397f50b74db581b784bcc681ab357db1e06156a6"
+    },
+    {
+      "file": "assets/official/voices/char_426_billro.mp3",
+      "duration": 19.220499,
+      "sha256": "b8099d83666b1fae7350fc08f7f89a2658a80c073d41e7a7e29ee0a5592ba0a8"
+    },
+    {
+      "file": "assets/official/voices/char_430_fartth.mp3",
+      "duration": 11.37,
+      "sha256": "d6a8125ffab7a2138dcee64616eb493163582eaea827e553fc720b44566418da"
+    },
+    {
+      "file": "assets/official/voices/char_431_ashlok.mp3",
+      "duration": 7.98,
+      "sha256": "5054ff8fbfe2b211b9d4a95cb60b0ea3fbf1832e1dd2c60249f9a3fd58e6be0f"
+    },
+    {
+      "file": "assets/official/voices/char_433_windft.mp3",
+      "duration": 10.064989,
+      "sha256": "efea88e1cf4dfff7f669281564c68ff41e48805a5f45e395477110ea9cb3f815"
+    },
+    {
+      "file": "assets/official/voices/char_437_mizuki.mp3",
+      "duration": 17.489161,
+      "sha256": "a3273deaddd3d36352dc2f0c1a3fa329b7977f8bbf5543b60808e0c99b0739ad"
+    },
+    {
+      "file": "assets/official/voices/char_440_pinecn.mp3",
+      "duration": 13.18551,
+      "sha256": "845b4b7e9256e88fd21d5303d0740ec62920c91b7187cd001e57cc064972d9d2"
+    },
+    {
+      "file": "assets/official/voices/char_445_wscoot.mp3",
+      "duration": 22.011383,
+      "sha256": "51d12d6280547d94016e7b6f59f41cae4a36df2e1a3df886cb4b5eb6dfd63c17"
+    },
+    {
+      "file": "assets/official/voices/char_446_aroma.mp3",
+      "duration": 18.769274,
+      "sha256": "7c9758db7f993d4afbf3b8e4fc2b2d7a6bfc19fb0fbcc15da0c5f878e6c75b24"
+    },
+    {
+      "file": "assets/official/voices/char_450_necras.mp3",
+      "duration": 22.28,
+      "sha256": "3fa39a945801b99757e4c8440efefa9c4047fcb1322b13e7ae25a543c39d5afb"
+    },
+    {
+      "file": "assets/official/voices/char_452_bstalk.mp3",
+      "duration": 15.459932,
+      "sha256": "27d6efce6637d227e2505780434ccc801906bdfb75cdc7ac6ccaabfc5b3d21b9"
+    },
+    {
+      "file": "assets/official/voices/char_464_cement.mp3",
+      "duration": 11.394989,
+      "sha256": "3c15116155cf07bcdb238e8433287b8357d1ee49429e83dc2598a08dc38998c5"
+    },
+    {
+      "file": "assets/official/voices/char_469_indigo.mp3",
+      "duration": 21.869683,
+      "sha256": "894fc417e307f8622b406f2d7952a806b28a09f2d56743502edac0c6fb5e4bfb"
+    },
+    {
+      "file": "assets/official/voices/char_473_mberry.mp3",
+      "duration": 26.66,
+      "sha256": "3ca63afaa7d77b279c608e2ab82b3a147b8539fb003b9877e595e121f66e6f37"
+    },
+    {
+      "file": "assets/official/voices/char_475_akafyu.mp3",
+      "duration": 17.334104,
+      "sha256": "fbe984a572cd32db8cd18142952811bf69ff8343d2237da3be326720cfa1c4d8"
+    },
+    {
+      "file": "assets/official/voices/char_476_blkngt.mp3",
+      "duration": 17.28,
+      "sha256": "dfcf40c9a870ded07581e3b1edf6e11b6c6718d7bdd808eb9791ddd60b01b629"
+    },
+    {
+      "file": "assets/official/voices/char_478_kirara.mp3",
+      "duration": 12.674671,
+      "sha256": "41e8be61553dd6be0c7d21eb55788909b6a2a784279644bbb83d9ccf324ede90"
+    },
+    {
+      "file": "assets/official/voices/char_479_sleach.mp3",
+      "duration": 6.774989,
+      "sha256": "dff28b25a84c3cbf11838a11702b1f430627b026a8f3b1f65beff52dfd0668b5"
+    },
+    {
+      "file": "assets/official/voices/char_484_robrta.mp3",
+      "duration": 15.814989,
+      "sha256": "8fa1086231ab497d4f6cff118e03f97317cafafce0726e539d6a0408151c426d"
+    },
+    {
+      "file": "assets/official/voices/char_485_pallas.mp3",
+      "duration": 20.131746,
+      "sha256": "1527d7e65c88c95fe51678d16f4e4ed6a6705286c57bf24202a4f09054b8f5e1"
+    },
+    {
+      "file": "assets/official/voices/char_487_bobb.mp3",
+      "duration": 23.933855,
+      "sha256": "e0f385a1dda6a327f88931308f681ed66a6f3e2036ef14698ec565bf1a17bbf7"
+    },
+    {
+      "file": "assets/official/voices/char_488_buildr.mp3",
+      "duration": 21.424989,
+      "sha256": "5ce34d86c4cec50d072ab05617903f3a99be82a3d49a494ecb2a1c527bff64ae"
+    },
+    {
+      "file": "assets/official/voices/char_489_serum.mp3",
+      "duration": 15.545011,
+      "sha256": "19dbe145e0312b8af3b6ce7ab4e4870d1a00b54a9e3897e81b408ef25f0e46a6"
+    },
+    {
+      "file": "assets/official/voices/char_491_humus.mp3",
+      "duration": 13.044989,
+      "sha256": "38cd31ed541fa4233a189d543876829e4a4fae128c3d68b67da51ca2479a8bb6"
+    },
+    {
+      "file": "assets/official/voices/char_492_quercu.mp3",
+      "duration": 19.42,
+      "sha256": "bf82ac6c60d976d90d8606c8ee8270b207e0d2519baac07ad99c4e357e2628c3"
+    },
+    {
+      "file": "assets/official/voices/char_493_firwhl.mp3",
+      "duration": 22.174989,
+      "sha256": "ccd14f3e8dfee116fde3ab572b5bdb25d5efcffe178b166802dc6c6be7988758"
+    },
+    {
+      "file": "assets/official/voices/char_494_vendla.mp3",
+      "duration": 22.94,
+      "sha256": "eedeb7131d94ef7bdc313690d82f6487fe5059aa75778c6ca17637502be7e9c2"
+    },
+    {
+      "file": "assets/official/voices/char_497_ctable.mp3",
+      "duration": 16.204989,
+      "sha256": "e72a3f01479bf1b126fb5de9eed3004021bf5d00baf803329ab1dd79c1a180d1"
     }
   ],
-  "results": {
-    "portraits": "https://github.com/ArknightsAssets/ArknightsAssets2/tree/cn/assets/dyn/arts/charportraits",
-    "professions": "https://github.com/ArknightsAssets/ArknightsAssets2/tree/cn/assets/dyn/arts/ui/%5Buc%5Dcharcommon/dynprofession",
-    "portraitCount": 169,
-    "professionCount": 8,
-    "conversion": "Original 180x360 client portraits and original profession symbols, losslessly cached. Browser layout and light columns follow in-game screenshots; they are not the Unity result shader.",
-    "effects": {
-      "url": "https://ak.hycdn.cn/assetbundle/official/Android/assets/26-10-29-15-36-11-33649006/ui_recruit_states_recruit_ten_result_state.dat",
-      "md5": "8954e8df64c9a6e202fb707d9d705f45",
-      "bundle": "ui/recruit/states/recruit_ten_result_state.ab",
-      "conversion": "Original source pixels losslessly encoded; optional alpha crops remove only wholly transparent atlas margins. Colored rarity textures retain original RGB and alpha. No generated light artwork.",
-      "md5Scope": "Unpacked ui/recruit/states/recruit_ten_result_state.ab",
-      "archiveMd5": "be971a18d10c71fd6a503949785e6453"
-    }
-  },
   "recruitment": {
     "source": {
       "url": "https://ak.hycdn.cn/assetbundle/official/Android/assets/26-10-29-15-36-11-33649006/prefabs_gacha_gacha_phase_1.dat",
@@ -233,7 +1308,7 @@
       "conversion": "Original client textures and Sprite pixels losslessly converted. Cropped backgrounds remove only transparent borders. Layout and material/particle settings exported for browser adaptation.",
       "factions": "https://raw.githubusercontent.com/ArknightsAssets/ArknightsAssets2/cn/assets/dyn/arts/camplogo/",
       "professions": "https://raw.githubusercontent.com/ArknightsAssets/ArknightsAssets2/cn/assets/dyn/arts/profession_hub/",
-      "campMapping": "character_table teamId, then groupId, then nationId; first existing original camp logo. All 169 operators resolve without substitution.",
+      "campMapping": "character_table teamId, then groupId, then nationId; first existing original camp logo. Covers the union of all five historical rosters.",
       "md5Scope": "Unpacked prefabs/gacha/gacha_phase_1.ab",
       "archiveMd5": "79eb95dbb5f296852a7c2e58532103a8"
     },
@@ -243,5 +1318,10 @@
     "voiceLine": "CN_011 / GACHA",
     "voiceSource": "https://torappu.prts.wiki/assets/audio/voice/",
     "voiceConversion": "Original performances converted WAV to MP3; no trimming, speed, pitch, or synthesized speech. Original Chinese subtitles from client charword_table."
+  },
+  "pools": {
+    "data": "pools.json",
+    "artworkSources": "assets/official/pools/sources.json",
+    "layout": "All five pools use their original historical client prefab hierarchy. The four added layouts and checksum-pinned source bundles are recorded in assets/official/pools/*/prefab.json. Native entry end-state transforms, sprite canvases, masks and material colors are retained; full entry transitions and Unity particle shaders are not replayed. The selector uses official announcement banners."
   }
 }

@@ -1,5 +1,18 @@
 import test from 'node:test';import assert from 'node:assert/strict';import {readFileSync,existsSync} from 'node:fs';
+import {createHash} from 'node:crypto';
+import {BANNERS} from '../dist/engine.js';
 const root=new URL('../dist/assets/official/',import.meta.url),data=JSON.parse(readFileSync(new URL('scene/bag.json',root),'utf8'));
+test('all four historical home pages retain their verified original hierarchy and intact sprite canvases',()=>{
+ const md5={LIMITED_70_0_1:'e805033c5b5b0a161022e600fa263e42',LIMITED_73_0_1:'d4989dba5221434716e28b2cafcb3141',LIMITED_76_0_1:'7c4bb53da5357a306e520e1286ed6886',LINKAGE_54_0_1:'2f2dad3b628645519ebba0efc24c7291'};
+ const layouts=BANNERS.filter(b=>b.ui);assert.equal(layouts.length,4);
+ for(const b of layouts){
+  const file=new URL('../dist/'+b.ui,import.meta.url),layout=JSON.parse(readFileSync(file,'utf8')),nodes=layout.nodes;
+  assert.equal(layout.source.md5,md5[b.id]);assert.equal(nodes[layout.root].name,b.id);assert.ok(Object.keys(nodes).length>=60);
+  const seen=new Set();function walk(id){assert.ok(!seen.has(id));seen.add(id);for(const child of nodes[id].children)if(nodes[child])walk(child);}walk(layout.root);assert.equal(seen.size,Object.keys(nodes).length);
+  for(const sprite of Object.values(layout.sprites)){const bytes=readFileSync(new URL(sprite.file,file));assert.equal(createHash('sha256').update(bytes).digest('hex'),sprite.sha256);assert.ok(sprite.canvas.every(v=>v>0));}
+  for(const node of Object.values(nodes)){for(const image of node.images){if(image.sprite!=='0')assert.ok(layout.sprites[image.sprite],b.title+' '+node.name);}assert.ok(Number.isFinite(node.position.x)&&Number.isFinite(node.position.y));}
+ }
+});
 test('each pool operator has a local result portrait and profession symbol',()=>{const operators=JSON.parse(readFileSync(new URL('../dist/operators.json',import.meta.url),'utf8'));for(const op of operators){assert.ok(existsSync(new URL('results/'+op.id+'.webp',root)),op.name);assert.ok(existsSync(new URL('results/class_'+op.profession.toLowerCase()+'.webp',root)),op.profession);}});
 test('official scene has complete bones, bind matrices, geometry and textures',()=>{const ids=new Set(data.nodes.map(n=>n.id));assert.equal(ids.size,data.nodes.length);for(const m of data.meshes){assert.ok(ids.has(m.node));const g=data.geometries[m.geometry];for(const b of m.bones)assert.ok(ids.has(b));if(m.bones.length)assert.equal(g.bindPoses.length,m.bones.length);for(const matrix of g.bindPoses){assert.equal(matrix.length,16);assert.ok(matrix.every(Number.isFinite));}assert.ok(g.Vertices.flat().every(Number.isFinite));assert.ok(g.triangles.flat(2).every(i=>i>=0&&i<g.Vertices.length));}for(const t of Object.values(data.textures))assert.ok(existsSync(new URL('scene/'+t,root)));});
 test('original arrival/open camera and bone clips remain available',()=>{for(const name of ['gacha_bag_start','gacha_bag_open','gacha_main_cam_start','gacha_main_cam_loop']){const clip=data.clips[name];assert.ok(clip.duration>0);for(const t of clip.tracks){assert.equal(t.values.length,t.times.length*(t.property==='quaternion'?4:3));assert.ok(t.values.every(Number.isFinite));assert.ok(t.times.every((v,i)=>!i||v>=t.times[i-1]));}}});

@@ -19,6 +19,9 @@ VOICE_BASE='https://torappu.prts.wiki/assets/audio/voice/'
 def table(name,cache):
  path=ROOT/'research'/cache
  if not path.exists():
+  shared=ROOT/'research'/({'charword_table':'charword','character_table':'character'}[name]+'-multi.json')
+  if shared.exists():path.write_bytes(shared.read_bytes())
+ if not path.exists():
   r=requests.get(TABLE_BASE+name+'.json',timeout=40);r.raise_for_status();path.write_bytes(r.content)
  return json.loads(path.read_text(encoding='utf-8'))
 
@@ -27,9 +30,12 @@ for binary in ['ffmpeg','ffprobe']:
 words=table('charword_table','charword-recruitment.json')
 characters=table('character_table','character-recruitment.json')
 operators=json.loads((ROOT/'dist/operators.json').read_text(encoding='utf-8'))
+previous=json.loads(MANIFEST.read_text(encoding='utf-8')) if MANIFEST.exists() else {}
 entries={}
 for op in operators:
- char_id=op['id'];jp=words['voiceLangDict'][char_id]['dict']['JP']
+ char_id=op['id'];languages=words['voiceLangDict'][char_id]['dict']
+ # Dungeon Meshi's original Japanese cast is stored under LINKAGE, not JP.
+ jp=languages.get('JP') or languages['LINKAGE']
  candidates=[v for v in words['charWords'].values() if v['charId']==char_id and v['placeType']=='GACHA' and v['wordKey']==jp['wordkey']]
  assert len(candidates)==1,(char_id,[v['voiceAsset'] for v in candidates])
  line=candidates[0];char=characters[char_id]
@@ -43,6 +49,10 @@ for op in operators:
   'source':source,'metadataSource':TABLE_BASE+'charword_table.json',
   'available':False
  }
+ old=previous.get(char_id,{})
+ if old.get('available') and old.get('source')==source and (ROOT/'dist'/old['url']).exists():
+  assert hashlib.sha256((ROOT/'dist'/old['url']).read_bytes()).hexdigest()==old['sha256']
+  entries[char_id]=old
 
 def save_manifest():
  tmp=ROOT/'research/voices-manifest.tmp'
@@ -75,7 +85,9 @@ def one(item):
 
 failures={}
 with concurrent.futures.ThreadPoolExecutor(6) as executor:
- futures={executor.submit(one,item):item[0] for item in entries.items()}
+ pending=[item for item in entries.items() if not item[1]['available']]
+ print('New voices to fetch',len(pending),flush=True)
+ futures={executor.submit(one,item):item[0] for item in pending}
  for count,future in enumerate(concurrent.futures.as_completed(futures),1):
   char_id=futures[future]
   try:
@@ -83,7 +95,7 @@ with concurrent.futures.ThreadPoolExecutor(6) as executor:
   except Exception as error:
    failures[char_id]=str(error);entries[char_id]['error']=str(error)
    print('FAILED',char_id,str(error),flush=True)
-  if count%10==0 or count==len(entries):
+  if count%10==0 or count==len(pending):
    save_manifest();print('Verified',count,'/',len(entries),'failures',len(failures),flush=True)
 save_manifest()
 print(json.dumps({'total':len(entries),'available':sum(v['available'] for v in entries.values()),'failures':failures,'totalBytes':sum(p.stat().st_size for p in OUT.glob('*.mp3'))},ensure_ascii=True),flush=True)
